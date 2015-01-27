@@ -6,14 +6,14 @@
       "start_time": "5:30pm",
       "end_time": "8:00pm",
       "subjects": [
-        "VWW Welcome w/ Tiff or Rachel",
+        "VWW Welcome with Rachel",
         "Intakes, Emergency Contact info, Assessments",
         "Ice Breaker - Getting to know you",
         "Course overview (Github site for curriculum and assignments), Group Rules, Goals, Expectations"
       ],
       "assignments": [
         "Goal setting - what do you hope to get out of the program - what kind of job are you looking for?",
-        "Prep for Saturday - Create a gmail and google docs account, create a folder to store your assignments named 'Firstname Lastname - Step Up IT' (example: 'Jenny Beaudin - Step Up IT') and share it with the VWW account (TODO: Fill in email)"
+        "Prep for Saturday - Create a gmail and google docs account, create a folder to store your assignments named 'Firstname Lastname - Step Up IT' (example: 'Jenny Beaudin - Step Up IT') and share it with the VWW account"
       ]
     },{
       "title": "Women in IT Panel & Computer Setup",
@@ -24,11 +24,11 @@
         "Check-in",
         "Paperwork follow up",
         "Homework review",
-        "Computer set-up and installing programs (text editor, HTML, CSS, JS, other), intro to Pluralsight, Codecademy, Gmail accounts, Google docs"
+        "Computer set-up and installing programs Brackets, Pluralsight, Codecademy, Gmail accounts, Google docs"
       ],
       "presentations": [
         "10:30-12:30 - Programming and Logic overview/ice breaker (Karen Walkerman)",
-        "1:00-3:00 - Women in IT Panel Discussion & Jobs in IT in Vermont: How you got to where you are and how self esteem plays a role (Robin Lane Allison Miller, Maura Crawford, Maureen McElaney, Donna Bepler)"
+        "1:00-3:00 - Women in IT Panel Discussion & Jobs in IT in Vermont (Robin Lane, Allison Miller, Maureen McElaney, Donna Bepler)"
       ],
       "labs": [
         "Hello World exercise"
@@ -36,7 +36,7 @@
       "assignments": [
         "Look around and familiarize with Pluralsight and Codecademy",
         "Pluralsight module on CSS and HTML",
-        "Resumes: Drafts to Jenny by Monday"
+        "Resumes: Drafts to Jenny by Wednesday"
       ]
     },{
       "title": "Computer Anatomy",
