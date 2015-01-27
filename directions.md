@@ -31,18 +31,9 @@ Turn on Route 2A toward Essex Junction. At the Five Corners in Essex Junction co
 
 For classes meeting in the **Natural Resources Building** or **Building Technology Building**, follow the above directions. After entering the school, continue past front of school and come to a stop sign. Turn left on Drury Drive and then turn left on Meadow Terrace. Buildings will be in front of you at end of Meadow Terrace (Natural Resoures is the building on the left and Building Technology is the building on the right). **Some classes meet at Vermont Technical College** which is located at Blair Park (off Route 2A) in Williston, VT. Classes meet in Building 400. 
 
-## Directions from Essex HS Front Entrance to C132 Computer Animation and Web Page Design Lab 
+## Directions to M117 Classroom 
 
-* Enter into the building through the main doors. The gymnasium is on your left. 
-* Take your first RIGHT.
-* Walk through 2 sets of double doors and then turn LEFT.
-* Walk through 2 more sets of double doors and then turn RIGHT.
-* The lab is about 3/4 of the way down the hallway on the Right.
+Enter Essex High School at the West entrance at Door 34. (If you are looking at the front of the High School, the entrance is to the right on the side of the building directly across the parking lot from Essex Rescue. Do not use the CTE entrance!  This entrance is near the library and is easily recognized because that side of the building is comprised almost entirely of windows). 
 
-## Directions from CTE Front Entrance to C132 Computer Animation and Web Page Design Lab
+Once you enter the building, the lab is on the same floor, to the left. It is room M117.
 
-* Enter the building through the main CTE entrance. 
-* Go to the end of the hallway and turn LEFT (at the Rm F117 sign)
-* Walk through 3 sets of double doors and then turn LEFT (at the Rm C129 sign). 
-* Take your first RIGHT. 
-* The lab is about 3/4 of the way down the hallway on the Right.
