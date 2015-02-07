@@ -117,8 +117,8 @@ You all heard me talk about accessibility several times. Now is the time to get 
 	+ Table Footer (row) `<tfoot>`
 	+ Table Row `<tr>`
 	+ Table Header (cell) `<th>`
-	+ Table Data (cell) `<td>` 
-	
+	+ Table Data (cell) `<td>`
+
 <img src="../images/table-structure.png" alt="the basic html layout of a table">
 
 
@@ -127,9 +127,9 @@ You all heard me talk about accessibility several times. Now is the time to get 
 - Table Attributes
 	+ Make a cell span multiple rows `<td rowspan="2">`
 	+ Make a cell span multiple columns `<td colspan="2">`
-	
+
 - Next Steps
-	+ Watch this old (2009) [video](http://css-tricks.com/video-screencasts/61-basic-table-styling/) (you can skip 4:30-6:20 which is basically an add) about styling tables	
+	+ Watch this old (2009) [video](http://css-tricks.com/video-screencasts/61-basic-table-styling/) (you can skip 4:30-6:20 which is basically an ad) about styling tables
 
 ### HTML Entities
 
@@ -174,7 +174,7 @@ How do we tell our CSS what to target?
 - HTML element
 
     `p { color: green; }`
-    
+
 	+ Give all paragraph elements a text color of green
 
 	`p a { text-decoration: none; }`
@@ -182,16 +182,16 @@ How do we tell our CSS what to target?
 - Class (remember class is a global HTML attribute and can be used on all HTML elements)
 
     `<p class="highlight">This is highlighted text.</p>`
-    
+
     `p.highlight { color: yellow; }`
     + Give all paragraphs with a class of highlight a text color of yellow
 	+ A page can contain multiple instances of a class
 - ID (also a global HTML attribute)
 
     `<p id="first">This is the first paragraph.</p>`
-    
+
     `p { font-size: 14px; }`
-    
+
     `p#first { font-size: 20px;`
     + Give all paragraphs a font size of 14 pixels, give paragraphs with an ID of first a font size of 20 pixels
 
@@ -210,12 +210,12 @@ How does the CSS know which rules to follow?
 	+ Is an HTML attribute
 	+ Only affects the HTML element it is within
 	+ Is not maintainable
-	
+
 	`<p style="color: blue; font-size: 14px;">This is a paragraph with blue text and a 14 pixel font size.</p>`
 - Embedded (Boo)
 	+ Goes inside the `<head>` tag
 	+ Only lives on that page so must be repeated on every page where you want styling
-	
+
 			<!DOCTYPE html>
 			<html>
 			<head>
@@ -233,14 +233,14 @@ How does the CSS know which rules to follow?
 	+ Why is this better?
 		* Maintainable, all the code lives in one place
 		* Global, the styles apply to your site, not your page or a single element
-		
+
 		`<link rel="stylesheet" href="path/to/stylesheet.css">`
 		* You can build conditions to support IE browsers
-		
-		`<!--[if lt IE 9]>`	
-		
+
+		`<!--[if lt IE 9]>`
+
 			`<link rel="stylesheet" href="path/to/other-stylesheet.css">`
-			
+
 		`<![endif]-->`
 
 ### CSS for Typography
@@ -272,6 +272,9 @@ How does the CSS know which rules to follow?
 	+ `italic` use this instead of `<em>`
 	+ `oblique`
 - `text-decoration`
+	+ `underline`
+	+ `line-through`
+	+ `overline`
 
 [Look up more CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
@@ -283,7 +286,7 @@ How does the CSS know which rules to follow?
 -  `:active`
 -  `:visited`
 
-[Pseudo Selectors](http://css-tricks.com/pseudo-class-selectors/) 
+[Pseudo Selectors](http://css-tricks.com/pseudo-class-selectors/)
 
 ### Google Fonts
 
@@ -291,7 +294,7 @@ How does the CSS know which rules to follow?
 	+ Use `@import`
 	+ Use `<link>`
 	+ Use javascript
-	
+
 [Google Fonts](https://www.google.com/fonts)
 
 [Code Pen Example](http://codepen.io/e-to-the-m/pen/siqav)
@@ -301,15 +304,19 @@ How does the CSS know which rules to follow?
 - Fonts live in a folder, just like your CSS
 
 		@font-face {
-	
+
 			font-family: 'Font Name';
-		
+
 			src: url('path-to-font.woff') format('woff'),
-		
+
 				 url('path-to-font.ttf') format('truetype'),
-			 
+
 		}
 
 [Font Squirrel](http://www.fontsquirrel.com/)
 
 [Using @font-face](http://css-tricks.com/snippets/css/using-font-face/)
+
+### Additional Resources
+
+[Can I Use?](http://caniuse.com)
