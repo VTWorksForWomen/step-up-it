@@ -320,3 +320,4 @@ How does the CSS know which rules to follow?
 ### Additional Resources
 
 [Can I Use?](http://caniuse.com)
+[CSS3 Please](http://css3please.com/)
