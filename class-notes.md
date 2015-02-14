@@ -47,7 +47,7 @@ We covered HTML tags and attributes, Brackets and developer tools.
 
 ### HTML Structure
 
-<img src="../images/html-structure.png" alt="the basic html layout of a page">
+<img src="../images/class-notes/html-structure.png" alt="the basic html layout of a page">
 
 - Everything visible on your page goes between the `<body>` tags.
 - Nesting
@@ -119,7 +119,7 @@ You all heard me talk about accessibility several times. Now is the time to get 
 	+ Table Header (cell) `<th>`
 	+ Table Data (cell) `<td>`
 
-<img src="../images/table-structure.png" alt="the basic html layout of a table">
+<img src="../images/class-notes/table-structure.png" alt="the basic html layout of a table">
 
 
 [Table Example](http://codepen.io/e-to-the-m/pen/JorgNj)
@@ -321,3 +321,90 @@ How does the CSS know which rules to follow?
 
 [Can I Use?](http://caniuse.com)
 [CSS3 Please](http://css3please.com/)
+
+## Class 11: HTML & CSS for Layouts
+
+- HTML tags for Layouts
+	+ div
+	+ header
+	+ footer
+	+ nav
+	+ main
+
+#### CSS for layouts and positioning
+- `display`
+	+ block
+		* Without setting a width they take up as much horizontal space as is available
+	+ inline
+		* Sits in line with other elements
+	+ inline-block
+		* Sits on a line like an inline element but will respect a set width and height
+	+ none
+		* Element is still in the DOM but it is not displayed and is ignored by screen readers.
+	+ [Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+- The box model
+	+ The width of an element is equal to margin + border + padding + width
+	+ using `box-sizing` we can set he width of an element and it will include the border, and padding.
+	+ [Code example](http://codepen.io/e-to-the-m/pen/VYQMBp)
+
+<figure>
+<img src="../images/class-notes/default-box-model.png" alt="the basic html layout of a table">
+<figcaption>The full width of the space this div occupies is 320px. 60px (30 px on each side) of margin, 60px of padding and a width of 200px.
+</figcaption>
+
+</figure>
+
+
+<figure>
+<img src="../images/class-notes/border-box.png" alt="the basic html layout of a table">
+<figcaption>The full width of the space this div occupies is 260px. A width of 200px which contains within it 60px of padding and has 60px of margin.
+</figcaption>
+
+</figure>
+
++ [Implementing box-sizing on your site](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+
+		html {
+			box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+
+- `float`
+	+ Think text wrap
+	+ Values accepted left, right, none
+	+ [Read all about floats](http://css-tricks.com/almanac/properties/f/float/)
+	+ [Watch a video about floats](http://css-tricks.com/video-screencasts/42-all-about-floats-screencast/)
+- `clear`
+	+ Values accepted are left, right and both
+	+ [clear example](http://codepen.io/e-to-the-m/pen/zxREjx)
+	+ [Force a parent to self-clear its children](http://codepen.io/e-to-the-m/pen/VYQMxp)
+- `position`
+	+ `static`
+		* This is the default
+	+ `relative`
+		* Like static but now positioning `left`, `right`, `top`, `bottom`, `z-index` will affect the position
+		* Sets positioning context
+	+ `absolute`
+		* Removes the element from the flow of the document
+		* Will not affect the positioning of other elements and vice versa
+	+ `fixed`
+		* Stays exactly where you put it
+
+[Experiment with position](http://codepen.io/e-to-the-m/pen/EaQwOV)
+
+- CSS: Columns
+	+ How can we achieve columns?
+		* floats
+			- Con: Can be tricky to understand
+			- Con: Understanding or anticipating where content will break can be difficult
+			- Pro: Widely supported
+			- Pro: Appropriate for layout because it keeps content quarantined
+			- [Explore Floats](http://codepen.io/OddlyTimbot/pen/zeHrt)
+		* CSS3 columns
+			- Con: Not widely accepted (Chrome, IE 10+, Firefox 1.5+, Safari 3+)
+			- Con: Not appropriate for page-level layout as content can run together
+			- Pro: Content will automatically break where approptiate and fill the column space
+			- [Explore CSS3 Columns](http://codepen.io/katydecorah/pen/7db740bc9ff28a1f7fdd70bcce257860)
