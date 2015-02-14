@@ -4,10 +4,8 @@ title: Directions
 permalink: /directions/
 ---
 
-## Directions Center for Technology, Essex and Essex High School
-
-**SkillTech**  
-A divison of Center for Technology  
+## Directions Center for Technology, Essex (CTE) 
+and Essex High School
 Essex 2 Educational Dr.  
 Suite 200  
 Essex Junction, VT 05452  
@@ -28,7 +26,5 @@ Turn on Route 2A toward Essex Junction. At the Five Corners in Essex Junction co
 
 ## Directions to M117 Classroom 
 
-Enter Essex High School at the West entrance at Door 34. (If you are looking at the front of the High School, the entrance is to the right on the side of the building directly across the parking lot from Essex Rescue. Do not use the CTE entrance!  This entrance is near the library and is easily recognized because that side of the building is comprised almost entirely of windows). 
-
-Once you enter the building, the lab is on the same floor, to the left. It is room M117.
+Enter Essex High School at the West entrance at Door 34. (If you are looking at the front of the High School, the entrance is to the right on the side of the building directly across the parking lot from Essex Rescue. Do not use the CTE entrance!  This entrance is near the library and is easily recognized because that side of the building is comprised almost entirely of windows). Once you enter the building, the lab is on the same floor, to the left. It is room M117.
 
