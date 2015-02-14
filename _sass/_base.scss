@@ -78,6 +78,17 @@ li {
     }
 }
 
+.in-page-nav{
+    margin-bottom: 18px;
+    ul {
+        margin: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            margin: 5px;
+        }
+    }
+}
 
 
 /**

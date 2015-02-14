@@ -3,8 +3,15 @@ layout: default
 title: Class Notes
 permalink: /class-notes/
 ---
+<nav class="in-page-nav">
+<ul>
+	<li><a href="#class5">Class 5</a></li>
+	<li><a href="#class8">Class 8</a></li>
+	<li><a href="#class11">Class 11</a></li>
+</ul>
+</nav>
 
-## Class 5: Introduction to HTML
+## <span id="class5">Class 5: Introduction to HTML<span>
 
 We covered HTML tags and attributes, Brackets and developer tools.
 
@@ -105,7 +112,7 @@ You can use what works for you, Chrome has built in developer tools as does Fire
 
 You all heard me talk about accessibility several times. Now is the time to get in the habit of building your sites with all your users in mind. Remember, the more people that can consume your content, the better. <a href="http://a11yproject.com/" title="The Accessibility Project">The Accessibility Project</a> is a great place to start.
 
-## Class 8: Introduction to CSS (Cascading Stylesheets)
+## <span id="class8">Class 8: Introduction to CSS (Cascading Stylesheets)</span>
 
 ### Tables
 
@@ -322,7 +329,7 @@ How does the CSS know which rules to follow?
 [Can I Use?](http://caniuse.com)
 [CSS3 Please](http://css3please.com/)
 
-## Class 11: HTML & CSS for Layouts
+## <span id="class11">Class 11: HTML & CSS for Layouts</span>
 
 - HTML tags for Layouts
 	+ div
