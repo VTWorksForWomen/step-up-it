@@ -5,7 +5,18 @@ title: Class Notes</p>
 
 <h2>permalink: /class-notes/</h2>
 
-<h2>Class 5: Introduction to HTML</h2>
+<p><nav class="in-page-nav"></p>
+
+<ul>
+    <li><a href="#class5">Class 5</a></li>
+    <li><a href="#class8">Class 8</a></li>
+    <li><a href="#class11">Class 11</a></li>
+</ul>
+
+
+<p></nav></p>
+
+<h2><span id="class5">Class 5: Introduction to HTML<span></h2>
 
 <p>We covered HTML tags and attributes, Brackets and developer tools.</p>
 
@@ -45,7 +56,7 @@ title: Class Notes</p>
 <li>Element
 
 <ul>
-<li>An individual compontent of HTML</li>
+<li>An individual component of HTML</li>
 <li>heading, paragraph, list item, table, image, etc</li>
 </ul>
 </li>
@@ -59,7 +70,7 @@ title: Class Notes</p>
 <li>Types of elements
 
 <ul>
-<li>Contaner element
+<li>Container element
 
 <ul>
 <li>A paragraph element contains text <p>some text</p></li>
@@ -88,11 +99,11 @@ title: Class Notes</p>
 <li>Class, ID, style, source</li>
 </ul>
 </li>
-<li>Goes inside the opening tag, before the right angle cracket (see the img example above)</li>
+<li>Goes inside the opening tag, before the right angle bracket (see the img example above)</li>
 <li>Global attributes are available to all elements
 
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">Global Attributes</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" title="Global Attributes">Global Attributes</a></li>
 </ul>
 </li>
 </ul>
@@ -100,7 +111,7 @@ title: Class Notes</p>
 <li>Value
 
 <ul>
-<li>The avlue assigned to an attribute</li>
+<li>The value assigned to an attribute</li>
 <li>The value is in side the quotation marks
 
 <ul>
@@ -114,14 +125,14 @@ title: Class Notes</p>
 
 <h3>HTML Structure</h3>
 
-<p><img src="../images/html-structure.png" alt="the basic html layout of a page"></p>
+<p><img src="../images/class-notes/html-structure.png" alt="the basic html layout of a page"></p>
 
 <ul>
 <li>Everything visible on your page goes between the <code>&lt;body&gt;</code> tags.</li>
 <li>Nesting
 
 <ul>
-<li>Some elemnts can nest inside another element</li>
+<li>Some elements can nest inside another element</li>
 <li>The first element to open must be the last to close.
 
 <ul>
@@ -135,14 +146,14 @@ title: Class Notes</p>
 
 <h3>HTML Elements</h3>
 
-<p>We covered a ton of elements! To see all the elemnets available to you check out the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Netowrk</a>.</p>
+<p>We covered a ton of elements! To see all the elements available to you check out the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" title="Mozilla Developer Network">Mozilla Developer Network</a>.</p>
 
 <ul>
 <li><p>Important points to remember:</p>
 
 <ul>
-<li>HTML tags are <em>not</em> presentational. They mean something and should be used to appropriately attribute that meaning to content.</li>
-<li><code>&lt;em&gt;</code> emphasises text. If your text doesn&rsquo;t need emphasis but just needs to be italic, we will do that with CSS.</li>
+<li>HTML tags are <em>not</em> presentational. They mean something and should be used to appropriately attribute that meaning to content. <a href="http://codepen.io/e-to-the-m/pen/QwMVRX?editors=110" title="An example about semantic HTML at CodePen">Example</a></li>
+<li><code>&lt;em&gt;</code> emphasizes text. If your text doesn&rsquo;t need emphasis but just needs to be italic, we will do that with CSS.</li>
 </ul>
 </li>
 <li><p>Elements we covered</p>
@@ -150,7 +161,7 @@ title: Class Notes</p>
 <ul>
 <li>Paragraph <code>&lt;p&gt;</code></li>
 <li>Headings <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code></li>
-<li>Emphasised text <code>&lt;em&gt;</code></li>
+<li>Emphasized text <code>&lt;em&gt;</code></li>
 <li>Important text <code>&lt;strong&gt;</code></li>
 <li>Anchor <code>&lt;a&gt;</code>
 
@@ -158,13 +169,18 @@ title: Class Notes</p>
 <li>Learn more about relative and absolute paths
 
 <ul>
-<li><a href="Absolute%20Vs.%20Relative%20Paths/Links">http://www.coffeecup.com/help/articles/absolute-vs-relative-pathslinks/</a></li>
-<li><a href="Quick%20Reminder%20About%20File%20Paths">http://css-tricks.com/quick-reminder-about-file-paths/</a></li>
+<li><a href="http://www.coffeecup.com/help/articles/absolute-vs-relative-pathslinks/" title="Absolute Vs. Relative Paths/Links">Absolute Vs. Relative Paths/Links</a></li>
+<li><a href="http://css-tricks.com/quick-reminder-about-file-paths/" title="Quick Reminder About File Paths">Quick Reminder About File Paths</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Images <code>&lt;img&gt;</code></li>
+<li>Images <code>&lt;img&gt;</code>
+
+<ul>
+<li>Remember that the Internet is made up of <del>cats</del> <ins>squares</ins>. <a href="http://codepen.io/e-to-the-m/pen/zyljo?editors=110" title="An illustrative image experiment in CodePen">See an example</a>.</li>
+</ul>
+</li>
 <li>Line Break <code>&lt;br&gt;</code></li>
 <li>Lists
 
@@ -174,10 +190,576 @@ title: Class Notes</p>
 <li>List Items (for both ordered and unordered lists) <code>&lt;li&gt;</code></li>
 </ul>
 </li>
-<li><a href="Sections%20and%20Outlines%20of%20an%20HTML5%20Document">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document</a>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 Document">Sections and Outlines of an HTML5 Document</a>
 
 <ul>
 <li>Header <code>&lt;header&gt;</code></li>
+<li>Navigation <code>&lt;nav&gt;</code></li>
+<li>Main <code>&lt;main&gt;</code></li>
+<li>Section <code>&lt;section&gt;</code>
+
+<ul>
+<li>A logical or thematic grouping of content that usually contains a heading.</li>
+</ul>
+</li>
+<li>Article <code>&lt;article&gt;</code>
+
+<ul>
+<li>A self-contained piece of content. It would still make sense if it was removed from the context of the page.</li>
+</ul>
+</li>
+<li>Footer <code>&lt;footer&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>Developer Tools</h3>
+
+<p>You can use what works for you, Chrome has built in developer tools as does Firefox, Safari and Internet Explorer. You can also download Firebug for Firefox.</p>
+
+<ul>
+<li>Developer tools allow you to:
+
+<ul>
+<li>See the HTML of a page</li>
+<li>Edit and rearrange the HTML elements</li>
+<li>Examine the box model of an element (we&rsquo;ll talk more about box model in next Saturday&rsquo;s class)</li>
+<li>Edit the CSS</li>
+<li>And more, all without damaging anything.</li>
+</ul>
+</li>
+<li><a href="http://www.html5rocks.com/en/tutorials/developertools/part1/" title="Introduction to Chrome Developer Tools, Part 1">Introduction to Chrome Developer Tools, Part 1</a></li>
+</ul>
+
+
+<h3>Accessibility</h3>
+
+<p>You all heard me talk about accessibility several times. Now is the time to get in the habit of building your sites with all your users in mind. Remember, the more people that can consume your content, the better. <a href="http://a11yproject.com/" title="The Accessibility Project">The Accessibility Project</a> is a great place to start.</p>
+
+<h2><span id="class8">Class 8: Introduction to CSS (Cascading Stylesheets)</span></h2>
+
+<h3>Tables</h3>
+
+<ul>
+<li>Tables are for tabular data - <strong>only</strong></li>
+<li>Parts of a table
+
+<ul>
+<li>Table <code>&lt;table&gt;</code></li>
+<li>Table Header (row) <code>&lt;thead&gt;</code></li>
+<li>Table Body <code>&lt;tbody&gt;</code></li>
+<li>Table Footer (row) <code>&lt;tfoot&gt;</code></li>
+<li>Table Row <code>&lt;tr&gt;</code></li>
+<li>Table Header (cell) <code>&lt;th&gt;</code></li>
+<li>Table Data (cell) <code>&lt;td&gt;</code></li>
+</ul>
+</li>
+</ul>
+
+
+<p><img src="../images/class-notes/table-structure.png" alt="the basic html layout of a table"></p>
+
+<p><a href="http://codepen.io/e-to-the-m/pen/JorgNj">Table Example</a></p>
+
+<ul>
+<li><p>Table Attributes</p>
+
+<ul>
+<li>Make a cell span multiple rows <code>&lt;td rowspan="2"&gt;</code></li>
+<li>Make a cell span multiple columns <code>&lt;td colspan="2"&gt;</code></li>
+</ul>
+</li>
+<li><p>Next Steps</p>
+
+<ul>
+<li>Watch this old (2009) <a href="http://css-tricks.com/video-screencasts/61-basic-table-styling/">video</a> (you can skip 4:30-6:20 which is basically an ad) about styling tables</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>HTML Entities</h3>
+
+<p><a href="http://unicode-table.com/en/">Unicode Character Table</a></p>
+
+<p><code>&lt;p&gt;I am going to the caf&amp;eacute;.&lt;/p&gt;</code></p>
+
+<p>I am going to the caf&eacute;.</p>
+
+
+<h3>What is CSS?</h3>
+
+<ul>
+<li>HTML provides the structure, CSS provides the style</li>
+<li>CSS stands for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</li>
+<li>CSS Structure <code>p { font-weight: bold; }</code></li>
+</ul>
+
+
+<h3>CSS Properties + Values = Rules</h3>
+
+<ul>
+<li>In the above example
+
+<ul>
+<li><code>p</code> is the selector</li>
+<li><code>font-weight</code> is the property</li>
+<li><code>bold</code> is the value
+
+<ul>
+<li>property + value = declaration (block)
+
+<ul>
+<li>declaration blocks always start with a left curly brace <code>{</code> and end with a right curly brace <code>}</code></li>
+<li>the property is separated from the value by a colon <code>:</code></li>
+<li>declaration blocks contain one or more declarations separated by a semicolon <code>;</code></li>
+</ul>
+</li>
+<li>selector + property + value = rule (also called a rule set)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>What is the Cascade?</h3>
+
+<ul>
+<li>All things being equal (see specificity) the last rule in CSS will be the one that is followed.</li>
+<li>In the example below the text is green because it comes after the rule that calls for the text to be red.</li>
+</ul>
+
+
+<p><code>p { color: red; }</code></p>
+
+<p><code>p { color: green; }</code></p>
+
+<p style="color: green;">I am going to the caf&eacute;.</p>
+
+
+<h3>Selectors</h3>
+
+<p>How do we tell our CSS what to target?</p>
+
+<ul>
+<li><p>HTML element</p>
+
+<p>  <code>p { color: green; }</code></p>
+
+<ul>
+<li>Give all paragraph elements a text color of green</li>
+</ul>
+
+
+<p>  <code>p a { text-decoration: none; }</code></p>
+
+<ul>
+<li>Turns off underline for all links (anchors) inside a paragraph.</li>
+</ul>
+</li>
+<li><p>Class (remember class is a global HTML attribute and can be used on all HTML elements)</p>
+
+<p>  <code>&lt;p class="highlight"&gt;This is highlighted text.&lt;/p&gt;</code></p>
+
+<p>  <code>p.highlight { color: yellow; }</code></p>
+
+<ul>
+<li>Give all paragraphs with a class of highlight a text color of yellow</li>
+<li>A page can contain multiple instances of a class</li>
+</ul>
+</li>
+<li><p>ID (also a global HTML attribute)</p>
+
+<p>  <code>&lt;p id="first"&gt;This is the first paragraph.&lt;/p&gt;</code></p>
+
+<p>  <code>p { font-size: 14px; }</code></p>
+
+<p>  <code>p#first { font-size: 20px;</code></p>
+
+<ul>
+<li>Give all paragraphs a font size of 14 pixels, give paragraphs with an ID of first a font size of 20 pixels</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>Specificity</h3>
+
+<p>How does the CSS know which rules to follow?</p>
+
+<ol>
+<li>The Cascade</li>
+<li>Specificity</li>
+</ol>
+
+
+<p><a href="http://www.standardista.com/css3/css-specificity/">CSS Specifishity</a></p>
+
+<h3>Great, how do I get CSS on my page?</h3>
+
+<ul>
+<li>Inline (Ugh)
+
+<ul>
+<li>Is an HTML attribute</li>
+<li>Only affects the HTML element it is within</li>
+<li>Is not maintainable</li>
+</ul>
+
+
+<p>  <code>&lt;p style="color: blue; font-size: 14px;"&gt;This is a paragraph with blue text and a 14 pixel font size.&lt;/p&gt;</code></p></li>
+<li><p>Embedded (Boo)</p>
+
+<ul>
+<li>Goes inside the <code>&lt;head&gt;</code> tag</li>
+<li><p>Only lives on that page so must be repeated on every page where you want styling</p>
+
+<pre><code>  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+      &lt;title&gt;Best Page Evar&lt;/title&gt;
+      &lt;style type="text/css"&gt;
+          body {
+              color: green;
+              font-size: 12px;
+          }
+      &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>With a <code>&lt;link&gt;</code> (Yay!)</p>
+
+<ul>
+<li>Why is this better?
+
+<ul>
+<li>Maintainable, all the code lives in one place</li>
+<li>Global, the styles apply to your site, not your page or a single element</li>
+</ul>
+
+
+<p>  <code>&lt;link rel="stylesheet" href="path/to/stylesheet.css"&gt;</code></p>
+
+<ul>
+<li>You can build conditions to support IE browsers</li>
+</ul>
+
+
+<p>  <code>&lt;!--[if lt IE 9]&gt;</code></p>
+
+<pre><code>  `&lt;link rel="stylesheet" href="path/to/other-stylesheet.css"&gt;`
+</code></pre>
+
+<p>  <code>&lt;![endif]--&gt;</code></p></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>CSS for Typography</h3>
+
+<ul>
+<li><code>color</code>
+
+<ul>
+<li>color name <code>green</code></li>
+<li>hexadecimal value <code>#00ff00</code></li>
+<li>rgb (red, green, blue) value <code>rgb(0, 255, 0)</code></li>
+<li><a href="http://www.colorhexa.com/">ColorHexa</a></li>
+</ul>
+</li>
+<li><code>font-weight</code>
+
+<ul>
+<li><code>normal</code> or <code>400</code></li>
+<li><code>bold</code> or <code>700</code> use this instead of strong</li>
+<li><code>bolder</code>
+
+<ul>
+<li>One font weight darker than the parent element (among the available weights of the font).</li>
+</ul>
+</li>
+<li><code>lighter</code>
+
+<ul>
+<li>One font weight lighter than the parent element (among the available weights of the font).</li>
+</ul>
+</li>
+<li><code>100</code>, <code>200</code>, <code>300</code>, <code>400</code>, <code>500</code>, <code>600</code>, <code>700</code>, <code>800</code>, <code>900</code>
+
+<ul>
+<li>If you use a font only has normal and bold weights the 100-500 will be <code>normal</code> and 600-900 will be <code>bold</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>font-size</code>
+
+<ul>
+<li>pixels <code>14px</code></li>
+<li>percent <code>50%</code></li>
+<li>ems <code>1em</code></li>
+</ul>
+</li>
+<li><code>font-family</code>
+
+<ul>
+<li>font stacks</li>
+<li><code>"Gill Sans Extrabold", Helvetica, sans-serif</code></li>
+<li><a href="http://www.sitepoint.com/eight-definitive-font-stacks/">8 Definitive Font Stacks</a></li>
+</ul>
+</li>
+<li><code>font-style</code>
+
+<ul>
+<li><code>normal</code></li>
+<li><code>italic</code> use this instead of <code>&lt;em&gt;</code></li>
+<li><code>oblique</code></li>
+</ul>
+</li>
+<li><code>text-decoration</code>
+
+<ul>
+<li><code>underline</code></li>
+<li><code>line-through</code></li>
+<li><code>overline</code></li>
+</ul>
+</li>
+</ul>
+
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Look up more CSS properties</a></p>
+
+<ul>
+<li>Remember you can use dev tools to show the hover state of links</li>
+</ul>
+
+
+<h3>Pseudo Selectors</h3>
+
+<ul>
+<li><code>:hover</code></li>
+<li><code>:active</code></li>
+<li><code>:visited</code></li>
+</ul>
+
+
+<p><a href="http://css-tricks.com/pseudo-class-selectors/">Pseudo Selectors</a></p>
+
+<h3>Google Fonts</h3>
+
+<ul>
+<li>To use Google Fonts
+
+<ul>
+<li>Use <code>@import</code></li>
+<li>Use <code>&lt;link&gt;</code></li>
+<li>Use javascript</li>
+</ul>
+</li>
+</ul>
+
+
+<p><a href="https://www.google.com/fonts">Google Fonts</a></p>
+
+<p><a href="http://codepen.io/e-to-the-m/pen/siqav">Code Pen Example</a></p>
+
+<h3>@font-face</h3>
+
+<ul>
+<li><p>Fonts live in a folder, just like your CSS</p>
+
+<pre><code>  @font-face {
+
+      font-family: 'Font Name';
+
+      src: url('path-to-font.woff') format('woff'),
+
+           url('path-to-font.ttf') format('truetype'),
+
+  }
+</code></pre></li>
+</ul>
+
+
+<p><a href="http://www.fontsquirrel.com/">Font Squirrel</a></p>
+
+<p><a href="http://css-tricks.com/snippets/css/using-font-face/">Using @font-face</a></p>
+
+<h3>Additional Resources</h3>
+
+<p><a href="http://caniuse.com">Can I Use?</a>
+<a href="http://css3please.com/">CSS3 Please</a></p>
+
+<h2><span id="class11">Class 11: HTML &amp; CSS for Layouts</span></h2>
+
+<ul>
+<li>HTML tags for Layouts
+
+<ul>
+<li>div</li>
+<li>header</li>
+<li>footer</li>
+<li>nav</li>
+<li>main</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>CSS for layouts and positioning</h4>
+
+<ul>
+<li><code>display</code>
+
+<ul>
+<li>block
+
+<ul>
+<li>Without setting a width they take up as much horizontal space as is available</li>
+</ul>
+</li>
+<li>inline
+
+<ul>
+<li>Sits in line with other elements</li>
+</ul>
+</li>
+<li>inline-block
+
+<ul>
+<li>Sits on a line like an inline element but will respect a set width and height</li>
+</ul>
+</li>
+<li>none
+
+<ul>
+<li>Element is still in the DOM but it is not displayed and is ignored by screen readers.</li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">Display</a></li>
+</ul>
+</li>
+<li>The box model
+
+<ul>
+<li>The width of an element is equal to margin + border + padding + width</li>
+<li>using <code>box-sizing</code> we can set he width of an element and it will include the border, and padding.</li>
+<li><a href="http://codepen.io/e-to-the-m/pen/VYQMBp">Code example</a></li>
+</ul>
+</li>
+</ul>
+
+
+<p><figure>
+<img src="../images/class-notes/default-box-model.png" alt="the basic html layout of a table">
+<figcaption>The full width of the space this div occupies is 320px. 60px (30 px on each side) of margin, 60px of padding and a width of 200px.
+</figcaption></p>
+
+<p></figure></p>
+
+<p><figure>
+<img src="../images/class-notes/border-box.png" alt="the basic html layout of a table">
+<figcaption>The full width of the space this div occupies is 260px. A width of 200px which contains within it 60px of padding and has 60px of margin.
+</figcaption></p>
+
+<p></figure></p>
+
+<ul>
+<li><p><a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">Implementing box-sizing on your site</a></p>
+
+<pre><code>  html {
+      box-sizing: border-box;
+  }
+  *, *:before, *:after {
+      box-sizing: inherit;
+  }
+</code></pre></li>
+<li><p><code>float</code></p>
+
+<ul>
+<li>Think text wrap</li>
+<li>Values accepted left, right, none</li>
+<li><a href="http://css-tricks.com/almanac/properties/f/float/">Read all about floats</a></li>
+<li><a href="http://css-tricks.com/video-screencasts/42-all-about-floats-screencast/">Watch a video about floats</a></li>
+</ul>
+</li>
+<li><code>clear</code>
+
+<ul>
+<li>Values accepted are left, right and both</li>
+<li><a href="http://codepen.io/e-to-the-m/pen/zxREjx">clear example</a></li>
+<li><a href="http://codepen.io/e-to-the-m/pen/VYQMxp">Force a parent to self-clear its children</a></li>
+</ul>
+</li>
+<li><code>position</code>
+
+<ul>
+<li><code>static</code>
+
+<ul>
+<li>This is the default</li>
+</ul>
+</li>
+<li><code>relative</code>
+
+<ul>
+<li>Like static but now positioning <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>, <code>z-index</code> will affect the position</li>
+<li>Sets positioning context</li>
+</ul>
+</li>
+<li><code>absolute</code>
+
+<ul>
+<li>Removes the element from the flow of the document</li>
+<li>Will not affect the positioning of other elements and vice versa</li>
+</ul>
+</li>
+<li><code>fixed</code>
+
+<ul>
+<li>Stays exactly where you put it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p><a href="http://codepen.io/e-to-the-m/pen/EaQwOV">Experiment with position</a></p>
+
+<ul>
+<li>CSS: Columns
+
+<ul>
+<li>How can we achieve columns?
+
+<ul>
+<li>floats
+
+<ul>
+<li>Con: Can be tricky to understand</li>
+<li>Con: Understanding or anticipating where content will break can be difficult</li>
+<li>Pro: Widely supported</li>
+<li>Pro: Appropriate for layout because it keeps content quarantined</li>
+<li><a href="http://codepen.io/OddlyTimbot/pen/zeHrt">Explore Floats</a></li>
+</ul>
+</li>
+<li>CSS3 columns
+
+<ul>
+<li>Con: Not widely accepted (Chrome, IE 10+, Firefox 1.5+, Safari 3+)</li>
+<li>Con: Not appropriate for page-level layout as content can run together</li>
+<li>Pro: Content will automatically break where approptiate and fill the column space</li>
+<li><a href="http://codepen.io/katydecorah/pen/7db740bc9ff28a1f7fdd70bcce257860">Explore CSS3 Columns</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
