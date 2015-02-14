@@ -384,6 +384,7 @@ How does the CSS know which rules to follow?
 	+ Values accepted left, right, none
 	+ [Read all about floats](http://css-tricks.com/almanac/properties/f/float/)
 	+ [Watch a video about floats](http://css-tricks.com/video-screencasts/42-all-about-floats-screencast/)
+		* Keep in mind that this video is fairly old. The information about floats is still accurate but some general coding conventions have since evolved.
 - `clear`
 	+ Values accepted are left, right and both
 	+ [clear example](http://codepen.io/e-to-the-m/pen/zxREjx)
