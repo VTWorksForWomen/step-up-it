@@ -416,3 +416,14 @@ How does the CSS know which rules to follow?
 			- Con: Not appropriate for page-level layout as content can run together
 			- Pro: Content will automatically break where approptiate and fill the column space
 			- [Explore CSS3 Columns](http://codepen.io/katydecorah/pen/7db740bc9ff28a1f7fdd70bcce257860)
+
+### Resetting CSS Styles
+
+We talked about CSS resets and using them to start from the same(ish) space regardless of browser.
+
+[Check out the Normalize reset](https://github.com/necolas/normalize.css/blob/master/normalize.css)
+
+- How to implement the reset
+	+ Step 1: Add the file `normalize.css` to your css folder
+	+ Step 2: Adda stylesheet link in the `head` of your document *before* your existing stylesheet link `<link rel="stylesheet" href="css/normalize.css">`
+	+ Step 3: Profit!
