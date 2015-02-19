@@ -432,4 +432,4 @@ We talked about CSS resets and using them to start from the same(ish) space rega
 ## <span id="class14">Class 14: Introduction to Javascript</span>
 
 
-[Intro to Programming with JavaScript Slideshow](/step-up-it/classes/javascript/)
+[Intro to Programming with JavaScript Slideshow]({{ site.baseurl }}/classes/javascript/class1.html)
