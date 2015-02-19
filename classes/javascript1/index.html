@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to Programming with Javascript</title>
+
+		<meta name="author" content="Ben Glassman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+<style type="text/css">
+.value { color: orange; }
+.type { color: violet; }
+.operator { color: limegreen; }
+.variable { color: turquoise; }
+.function { color: magenta; }
+.argument { color: sienna; }
+</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Intro to Programming<br /><small>with</small> Javascript</h1>
+					<p>
+						<small>Created by <a href="http://benglassman.com">Ben Glassman</a> / <a href="http://github.com/benglass">github.com/benglass</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Welcome</h2>
+                    <p>Tell us about yourself.</p>
+                    <ul>
+                        <li>Who are you?</li>
+                        <li>What has been your favorite part of the course so far?</li>
+                        <li>Tell us about your first pet</li>
+                    </ul>
+				</section>
+
+                <section>
+                    <h2>Programming is Problem Solving</h2>
+                    <ul>
+                        <li>Programming can be challenging but also very rewarding</li>
+                        <li>When your code works you feel like a genius.</li>
+                        <li>When it doesnt work you feel like... not a genius.</li> 
+                        <li>Its normal not to understand everything in the beginning, or even later on</li>
+                        <li>Embrace partial knowledge and ask lots of questions</li>
+                        <li>Even experienced programmers run into questions every day they don't know the answers to or need to look up</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>What is Programming?</h2>
+                    <p>Writing step-by-step instructions for a computer.</p>
+                    <p>We call these instructions code.</p>
+                </section>
+
+                <section>
+                    <h2>Javascript Code Example</h2>
+                    <div class="fragment">
+                        <h3>Step 1: Ask the user what their age is</h3>
+                        <pre><code data-trim contenteditable class="javascript">var age = prompt('How old are you?'); </code></pre>
+                    </div>
+                    <div class="fragment">
+                        <h3>Step 2: If they are not 21, recommend disney.com</h3>
+                        <pre><code data-trim contenteditable class="javascript">
+if (age < 21) {
+    alert("Perhaps you should try http://www.disney.com");
+}
+                        </code></pre>
+                    </div>
+                </section>
+
+				<section>
+					<h2>Why do we write programs?</h2>
+					<ul>
+						<li class="fragment">To perform repetitive tasks more efficiently</li>
+						<li class="fragment">To perform complex tasks consistently and accurately</li>
+						<li class="fragment">To transform and manipulate data</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Computers interpret instructions literally</h2>
+					<img src="img/computers-steve.png" />
+				</section>
+
+				<section>
+					<h2>Your Mom is a Clown<br />Your Dad is a Dinosaur</h2>
+					<p>Computers are like a person who only understands grammatically correct sentences. This can be frustrating.</p>
+					<blockquote class="fragment">
+						<p><strong>You:</strong> I took a picture of my mom and dad, a clown and a dinosaur.</p>
+						<p class="fragment"><strong>Computer:</strong> Your mom is a clown. Your dad is a dinosaur.</p>
+					</blockquote>
+				</section>
+
+                <section>
+                    <h2>Syntax: Rules for Talking to Computers</h2>
+                    <p>Every language has rules for how your instructions should be constructed so that a computer can understand them.</p>
+                    <p>When your instructions dont follow these rules, its a Syntax Error</p>
+                    <p>Can you think of some syntax rules for HTML or CSS?</p>
+                </section>
+                <section>
+                    <h2>HTML Syntax</h2>
+                    <p>A tag is an abbreviation surrounded by less than and greater than symbols.</p>
+                    <div class="fragment">
+                        <h3>Valid Syntax</h3>
+                        <pre><code data-trim contenteditable>&lt;p&gt;Hi!&lt;/p&gt;</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <h3>Syntax Error</h3>
+                        <pre><code data-trim contenteditable>&lt;pHi!&lt;/p&gt;</code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h2>CSS Syntax</h2>
+                    <p>A rule is a property followed by a colon followed by a value followed by a semi colon.</p>
+                    <div class="fragment">
+                        <h3>Valid Syntax</h3>
+                        <pre><code data-trim contenteditable>color: blue;</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <h3>Syntax Error</h3>
+                        <pre><code data-trim contenteditable>color = blue;</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Interpreted vs. Compiled</h2>
+                    <div style="float: left; width: 50%;">
+                        <h3>Interpreted</h3>
+                        <p>The computer can interpret and execute the code directly.</p>
+                        <p><strong>Examples:</strong> Javascript, PHP, Python, Perl and Ruby.</p> 
+                    </div>
+                    <div style="float: left; width: 50%;">
+                        <h3>Compiled</h3>
+                        <p>First, the code is compiled into an executable program. Second, this program can be executed by the computer.</p>
+                        <p><strong>Examples:</strong> C, C#, Java</p> 
+                    </div>
+                </section>
+                <section>
+                    <h2>Interpreted vs. Compiled Advantages</h2>
+                    <div style="float: left; width: 50%;">
+                        <h3>Interpreted</h3>
+                        <ul>
+                            <li>Faster to write code</li>
+                            <li>Cross-platform</li>
+                        </ul>
+                    </div>
+                    <div style="float: left; width: 50%;">
+                        <h3>Compiled</h3>
+                        <ul>
+                            <li>Faster to run code</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>REPL</h2>
+                    <p>Interpreted languages generally include tool called REPLs that allow you to enter a line of code and immediately see the result.</p>
+                    <ol>
+                        <li class="fragment highlight-current-blue"><strong>R</strong>ead: Read a line of code</li>
+                        <li class="fragment highlight-current-blue"><strong>E</strong>valuate: Interpret the line of code</li>
+                        <li class="fragment highlight-current-blue"><strong>P</strong>rint: Show the result</li>
+                        <li class="fragment highlight-current-blue"><strong>L</strong>oop: Go back to step 1 and wait</li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Try out a Javascript REPL</h2>
+                    <p>Every browser has a built in Javascript interpreters. Chrome has a built-in REPL called the console. Open it by going to <strong>Menu > Tools > Javascript Console</strong> or hitting <kbd>CTRL-SHIFT-J</kbd></p>
+                    <p>You can also expirement with REPLs for other languages at <a href="http://repl.it">repl.it</a></p>
+                </section>
+                <section>
+                    <h2>REPL/Console Excercises</h2>
+                    <ul>
+                        <li>Add 2 numbers together</li>
+                        <li>Type your name</li>
+                        <li>Type your name surrounded by quotes</li>
+                        <li>Type: alert('Hi!')</li>
+                        <li>Type: print('Hi!')</li>
+                        <li>Pick python or ruby on <a href="http://repl.it">repl.it</a> and try these excercises. Whats similar? Whats different?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>What is Javascript used for?</h2>
+                    <ul>
+                        <li><strong>Front-end Web Development</strong>: Web browsers have a built in javascript interpreter. Javascript is the only language embedded in all browsers.</li>
+                        <li><strong>Back-end Web Programming</strong>: <a href="http://nodejs.org">nodejs</a> allows you to run javascript on the server, where you would traditionally use other languages like C#, Python, PHP, Java or Ruby.</li>
+                        <li><strong>???</strong>: With the introduction of nodejs in 2009, javascript because usable as a general purpose scripting language.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Using Javascript in the Browser</h2>
+                    <p>Lets use javascript inside an HTML page. Make a folder called javascript. Inside it make a new html page called index.html
+                    and add the following code:</p>
+                    <pre><code data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Test Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+&lt;script&gt;
+    alert('Hello World!');
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Script Tags</h2>
+                    <p>You can mix JavaScript and HTML. The script tag tells your browser the code inside is javascript that should be run.</p>
+                    <pre><code data-trim contenteditable>
+&lt;script&gt;
+alert('Hello World!');
+&lt;/script&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Javascript Files</h2>
+                    <p>Just like CSS, you can place JavaScript in its own file and attach it to an HTML page.</p>
+                    <pre><code data-trim contenteditable>
+<script src="myfile.js"></script>
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Getting Results Onto Your Screen</h2>
+                    <h3>Popup Window</h3>
+                    <pre><code data-trim contenteditable>
+alert('Hello World!');
+                    </code></pre>
+                    <h3>Send it to the Console</h3>
+                    <pre><code data-trim contenteditable>
+console.log(5 + 2);
+                    </code></pre>
+                    <h3>Add to HTML</h3>
+                    <pre><code data-trim contenteditable>
+document.write('Hello!!!'); // Replaces all other HTML
+document.body.innerHTML = 'Hello!'; // Replace html inside &lt;body&gt;
+document.body.innerHTML += 'Hello!'; // Add html inside &lt;body&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Exercises</h2>
+                    <p>Open up index.html in your editor and try the follow exercises.</p>
+                    <ol>
+                        <li>Use alert to show a popup message</li>
+                        <li>Use console.log to send data to the console. Open the console to view it.</li>
+                        <li>Use document.body.innerHTML to set the text inside the body tag.</li>
+                        <li>Copy your javascript from the script tag (dont include the script tag itself) and place it in a new file called script.js</li>
+                        <li>Delete the old script tag. Link your script.js file to the page using the script tag and src attribute.</li>
+                    </ol>
+                </section>
+
+				<section>
+					<h2>Expressions</h2>
+					<p>An expression is a piece of code that can be evaluated to a value. Each line in following example is an expression.</p>
+					<pre><code data-trim contenteditable>var taskName = "Grocery shopping";
+5;
+"bob" + " " + "hoskins"
+4 * 2</code></pre>
+					<p>Anything you type into the REPL/console which does not result in an error is a valid expression.</p>
+				</section>
+
+				<section>
+					<h2>Values</h2>
+					<p>A <span class="value">value</span> is a single piece of data.</p>
+					<ul>
+						<li class="fragment">The name of a task: "<span class="value">Grocery Shopping</span>"</li>
+						<li class="fragment">Whether or not the task is completed: <span class="value">true</span> or <span class="value">false</span></li>
+						<li class="fragment">The date and time a task was completed: <span class="value">2015-02-27 12:30:00</span></li>
+						<li class="fragment">The order of the task in a list:  <span class="value">1</span> or <span class="value">2</span></li>
+						<li class="fragment">What other examples can you think of?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Types of Values (Data Types)</h2>
+					<p>Programming languages categorize <span class="value">values</span> into <span class="type">types</span>.</p>
+					<ul>
+						<li class="fragment"><span class="type">String</span>: "<span class="value">Grocery Shopping</span>"</li>
+						<li class="fragment"><span class="type">Boolean</span>: <span class="value">true</span> or <span class="value">false</span></li>
+						<li class="fragment"><span class="type">Date</span>: <span class="value">2015-02-27 12:30:00</span></li>
+						<li class="fragment"><span class="type">Integer</span>:  <span class="value">1</span> or <span class="value">2</span></li>
+						<li class="fragment">What other examples can you think of?</li>
+						<li class="fragment"><span class="type">Float</span>:  <span class="value">3.14159</span> or <span class="value">9.99</span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Strings</h2>
+					<p>A string is what programming languages call text. In javascript we surround strings with single or double quotes. There is no difference between single and double quotes.</p>
+					<p>What can we learn about strings from the examples below?</p>
+					<pre><code data-trim contenteditable>'Grocery Shopping'
+'Reread "To Kill a Mockinbird"'
+"Give the dog a bath"
+"Pick up dad's gift"
+</code></pre>
+				</section>
+
+				<section>
+					<h2>Numbers (Integers and Floats)</h2>
+					<p>An integer is a whole number (no decimal places). A float is a number with decimal places. Both are written without quotes in javascript.</p>
+					<pre><code data-trim contenteditable>10
+5
+3.14159
+9.99
+-50
+</code></pre>
+				</section>
+
+				<section>
+					<h2>Booleans</h2>
+					<p>A boolean is a yes/no value. It is written as either true or false, without any quotes.</p>
+					<pre><code data-trim contenteditable>true
+false
+</code></pre>
+				</section>
+
+				<section>
+					<h2>Variables</h2>
+					<p><span class="variable">Variables</span> are named containers that can hold <span class="value">values</span>.</p>
+					<img src="img/spice-tins.jpg" />
+				</section>
+
+				<section>
+					<h2>Creating Variables</h2>
+					<p>You create a <span class="variable">variable</span> by using the var keyword.<br />You decide on the name.</p>
+					<pre><code data-trim contenteditable>var taskName = "Grocery Shopping";
+var taskIsComplete = false;
+var taskPriority = 1;</code></pre>
+				</section>
+
+				<section>
+					<h2>Naming Variables</h2>
+                    <ul>
+                        <li>Variable names are case-sensitive.</li>
+                        <li>Variable names should be unique</li>
+                        <li>Variable names should only contain letters, numbers and certain special characters ($, _). </li>
+                        <li>Some names are not allowed because they are reserved by the language like <strong>var</strong> and <strong>if</strong></li>
+                        <li>Naming your variables clearly is crucial to writing code that is easy to understand.</p>
+                    </ul>
+				</section>
+
+				<section>
+					<h2>Changing Variable Values</h2>
+					<p>You can change a variable's value after creating it by assigning a value using the equals sign. The code below creates a variable called <span class="variable">taskName</span> with the value <span class="value">"Grocery Shopping"</span> and then changes the value to <span class="value">"Dog grooming"</span>.</p>
+					<pre><code data-trim contenteditable>var taskName = "Grocery Shopping";
+taskName = "Dog grooming";</code></pre>
+				</section>
+
+				<section>
+					<h2>Referencing Variables in Code</h2>
+					<p>Once you have created a variable you can reference it in code just by using the name.</p>
+					<pre><code data-trim contenteditable class="javascript">
+var age = 21;
+var ageInMonths = age * 12;
+console.log(ageInMonths); // Prints the result of 21 times 12
+</code></pre>
+				</section>
+
+				<section>
+					<h2>Variable Exercises</h2>
+                    <p>Use console.log to check the value of your variables</p>
+					<ol>
+						<li>Create a variable called taskName with the value of the name of a task that needs to be completed</li>
+						<li>Create a variable called incompleteTasks with a value of 4</li>
+						<li>Create a variable called completeTasks with a value of 3</li>
+						<li>Create a variable called totalTasks with a value of incompleteTasks + completeTasks</li>
+						<li>Create a variable with a name of your choice and do not assign it a value. What value is it given? (hint: use console.log to find out)</li>
+						<li>Create a variable with the name if and assign it any value. What happened?</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Operators</h2>
+					<p><span class="operator">Operators</span> are special symbols that we can use to compare, modify or combine values. </p>
+				</section>
+
+				<section>
+					<h2>Arithmetic Operators</h2>
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th>Description</th>
+								<th>Example</th>
+								<th>Result</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="operator">+</span></td>
+								<td>Adds 2 values</td>
+								<td>5 <span class="operator">+</span> 5</td>
+								<td>10</td>
+							</tr>
+
+							<tr>
+								<td><span class="operator">-</span></td>
+								<td>Subtracts one value from another</td>
+								<td>
+									5 <span class="operator">-</span> 3
+								</td>
+								<td>2</td>
+							</tr>
+
+							<tr>
+								<td><span class="operator">*</span></td>
+								<td>Multiply one value by another</td>
+								<td>
+									4 <span class="operator">*</span> 2
+								</td>
+								<td>8</td>
+							</tr>
+
+							<tr>
+								<td><span class="operator">/</span></td>
+								<td>Divide one value by another</td>
+								<td>
+									16 <span class="operator">/</span> 4
+								</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td><span class="operator">%</span></td>
+								<td>Divide one value by another</td>
+								<td>
+									5 <span class="operator">%</span> 4
+								</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Number Exercises</h2>
+					<ol>
+						<li>Add 2 numbers, store the result in a variable called sum</li>
+						<li>Multiply 2 numbers together</li>
+						<li>Subtract 1 number from another</li>
+						<li>Divide one number by another</li>
+						<li>Multiply .5 by 2. What did we learn?</li>
+						<li>Divide 5 by 3. What did you learn?</li>
+						<li>Find out the remainder of dividing one number by another</li>
+						<li>Divide a positive number by 0</li>
+						<li>Divide 0 number by 0</li>
+						<li>Cause an error by entering invalid code, what error did you see and why?</li>
+					</ol>
+				</section>
+				<section>
+					<h2>String Operators: +</h2>
+					<p>The <span class="operator">+</span> operator behaves differently when used with string values than numbers. It will combine them together into a new string.</p>
+					<pre><code data-trim contenteditable class="javascript">
+var kittensFirstName = 'Bing';
+var kittensLastName = 'Crosby';
+var kittensFullName = kittensFirstName + ' ' + kittensLastName;
+console.log(kittensFullName); // 'Bing Crosby'
+</code></pre>
+				</section>
+
+				<section>
+					<h2>String Operators: +=</h2>
+					<p>The <span class="operator">+=</span> operator lets you add some text to an existing string.</p>
+					<pre><code data-trim contenteditable class="javascript">
+var kittensName = 'Fluffy';
+kittensName += ' McDougle';
+console.log(kittensName); // 'Fluffy McDougle'
+</code></pre>
+				</section>
+
+
+				<section>
+					<h2>String Exercises</h2>
+					<ol>
+                        <li>Combine 2 strings together use the <span class="operator">+</span> operator</li>
+						<li>Combine 2 strings together with a space in the middle</li>
+						<li>Combine a string and a number. What did you learn?</li>
+						<li>Combine a number in quotes and a number not in quotes. what did you learn?</li>
+						<li>Try using one of the operators than <span class="operator">+</span> with 2 strings, what happens?</li>
+						<li>Create a string that includes single quotes</li>
+						<li>Create a string that includes double quotes</li>
+						<li>Divide a number in quotes by a number not in quotes, what did we learn? Try other operators (*, %)</li>
+						<li>Cause an error, what error did you see and why?</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Functions</h2>
+                    <p>Functions are reusable pieces of code. Once we define a function we can use it over and over.</p>
+                    <p>Functions take some kind of input and return some output.</p>
+                    <p>For example an <strong>add</strong> function would take 2 numbers as input and return the sum as output.</p>
+					<pre><code data-trim contenteditable class="javascript">
+var add = function(number1, number2) {
+    return number1 + number2;
+}
+                    </code></pre>
+				</section>
+
+				<section>
+					<h2>Calling Functions</h2>
+                    <p>Once a function has been defined, you can call it by typing the function name followed by parentheses.</p>
+                    <p>If the function takes any input, you can place it inside the parentheses.</p>
+                    <p>If the function returns any output using the return keyword, you can store it in a variable</p>
+					<pre><code data-trim contenteditable class="javascript">
+var add = function(number1, number2) {
+    return number1 + number2;
+}
+
+var result = add(5, 10);
+
+console.log(result); // 15
+                    </code></pre>
+				</section>
+
+				<section>
+					<h2>Anatomy of a Function: Arguments</h2>
+                    <p>A function can take input values, which are called <span class="argument">arguments</span>.</p>
+                    <p>The <span class="function">add</span> function we defined takes 2 arguments:<br />
+                    <span class="argument">number1</span> and <span class="argument">number2</span>.</p>
+					<pre><code data-trim contenteditable class="javascript">
+var add = function(number1, number2) {
+    return number1 + number2; // 5 + 10
+}
+
+add(5, 10);
+                    </code></pre>
+                </section>
+
+				<section>
+					<h2>Anatomy of a Function: Return Values</h2>
+                    <p>A function can return output using the <strong>return</strong> keyword.</p>
+                    <p>The code that calls the function can store the return value in a variable or use it directly.</p>
+					<pre><code data-trim contenteditable class="javascript">
+var add = function(number1, number2) {
+    return number1 + number2;
+}
+
+var sum = add(5, 10);
+console.log(add(2, 3));
+                    </code></pre>
+                </section>
+
+				<section>
+					<h2>You've Already Used Functions</h2>
+                    <p>What functions can you think of which we've already used?<br />
+                    <strong>hint:</strong> function calls look like functionName()</p>
+                    <p>What arguments does each function take?<br />
+                    What return value does each function produce if any?</p>
+                    <ul class="fragment">
+                        <li>alert('my message')</li>
+                        <li class="fragment">prompt('how old are you?')</li>
+                        <li class="fragment">console.log(5 + 10)</li>
+                    </ul>
+                </section>
+
+				<section>
+					<h2>Exercise: fullName function</h2>
+                    <ol>
+                        <li>Create a function called <span class="function">fullName</span>.</li>
+                        <li><span class="function">fullName</span> should take 2 arguments: <span class="argument">firstName</span> and <span class="argument">lastName</span>.</li>
+                        <li><span class="function">fullName</span> should combine <span class="argument">firstName</span> and <span class="argument">lastName</span> together with
+                        a space in between and return the result.</li>
+                        <li>Define a variable called <span class="variable">myFirstName</span> with a value of your first name.</li>
+                        <li>Define a variable called <span class="variable">myLastName</span> with a value of your last name.</li>
+                        <li>Call the function with your <span class="variable">myFirstName</span> and <span class="variable">myLastName</span> as arguments and store the result in a variable called <span class="variable">myFullName</span></li>
+                        <li>Call console.log, passing in the <span class="variable">myFullName</span> variable to see the result.</li>
+                    </ol>
+                </section>
+
+				<section>
+					<h2>Exercise: renderTask function</h2>
+                    <ol>
+                        <li>Create a function called <span class="function">renderTask</span>.</li>
+                        <li><span class="function">renderTask</span> should take 1 argument: <span class="argument">taskName</span></li>
+                        <li><span class="function">renderTask</span> should wrap &lt;li&gt; tags around <span class="argument">taskName</span> 
+                        and store the result in a variable called <span class="variable">taskHtml</span></li>
+                        <li>Use the <span class="operator">+=</span> operator to add <span class="variable">taskHtml</span> to document.body.innerHTML</li>
+                        <li>Call the function <span class="function">renderTask</span> multiple times, each time passing in a task name as the argument.</li>
+                        <li>You should see the tasks appear in your html</li>
+                    </ol>
+                </section>
+
+				<section>
+					<h2>Solution: renderTask function</h2>
+                    <pre><code data-trim contenteditable class="javascript">
+var renderTask = function(taskName) {
+    var taskHtml = '<li>' + taskName + '</li>';
+    document.body.innerHTML += taskHtml;
+}
+
+renderTask('Grocery shopping');
+renderTask('Walk the dog');
+                    </code></pre>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
