@@ -8,6 +8,7 @@ permalink: /class-notes/
 	<li><a href="#class5">Class 5</a></li>
 	<li><a href="#class8">Class 8</a></li>
 	<li><a href="#class11">Class 11</a></li>
+	<li><a href="#class14">Class 14</a></li>
 </ul>
 </nav>
 
@@ -427,3 +428,8 @@ We talked about CSS resets and using them to start from the same(ish) space rega
 	+ Step 1: Add the file `normalize.css` to your css folder
 	+ Step 2: Adda stylesheet link in the `head` of your document *before* your existing stylesheet link `<link rel="stylesheet" href="css/normalize.css">`
 	+ Step 3: Profit!
+
+## <span id="class14">Class 14: Introduction to Javascript</span>
+
+
+[Intro to Programming with JavaScript Slideshow](/step-up-it/classes/javascript1/)
