@@ -36,7 +36,7 @@
 .type { color: violet; }
 .operator { color: limegreen; }
 .variable { color: turquoise; }
-.function { color: magenta; }
+.function { color: crimson; }
 .argument { color: sienna; }
 </style>
 	</head>
@@ -213,7 +213,7 @@ if (age < 21) {
                     <ul>
                         <li><strong>Front-end Web Development</strong>: Web browsers have a built in javascript interpreter. Javascript is the only language embedded in all browsers.</li>
                         <li><strong>Back-end Web Programming</strong>: <a href="http://nodejs.org">nodejs</a> allows you to run javascript on the server, where you would traditionally use other languages like C#, Python, PHP, Java or Ruby.</li>
-                        <li><strong>???</strong>: With the introduction of nodejs in 2009, javascript because usable as a general purpose scripting language.</li>
+                        <li><strong>???</strong>: With the introduction of nodejs in 2009, javascript became usable as a general purpose scripting language.</li>
                     </ul>
                 </section>
 
@@ -239,7 +239,7 @@ if (age < 21) {
 
                 <section>
                     <h2>Script Tags</h2>
-                    <p>You can mix JavaScript and HTML. The script tag tells your browser the code inside is javascript that should be run.</p>
+                    <p>You can add JavaScript to an HTML document by placing it inside a script tag. The script tag tells the browser to treat the text inside it as JavaScript code that should be run.</p>
                     <pre><code data-trim contenteditable>
 &lt;script&gt;
 alert('Hello World!');
@@ -249,7 +249,7 @@ alert('Hello World!');
 
                 <section>
                     <h2>Javascript Files</h2>
-                    <p>Just like CSS, you can place JavaScript in its own file and attach it to an HTML page.</p>
+                    <p>Just like CSS, you can also place JavaScript in its own file and attach it to an HTML page.</p>
                     <pre><code data-trim contenteditable>
 <script src="myfile.js"></script>
                     </code></pre>
@@ -275,7 +275,7 @@ document.body.innerHTML += 'Hello!'; // Add html inside &lt;body&gt;
 
                 <section>
                     <h2>Exercises</h2>
-                    <p>Open up index.html in your editor and try the follow exercises.</p>
+                    <p>Open up index.html in your editor and try the follow exercises. Remember to put your JavaScript code inside the script tags.</p>
                     <ol>
                         <li>Use alert to show a popup message</li>
                         <li>Use console.log to send data to the console. Open the console to view it.</li>
@@ -286,18 +286,21 @@ document.body.innerHTML += 'Hello!'; // Add html inside &lt;body&gt;
                 </section>
 
 				<section>
-					<h2>Expressions</h2>
-					<p>An expression is a piece of code that can be evaluated to a value. Each line in following example is an expression.</p>
-					<pre><code data-trim contenteditable>var taskName = "Grocery shopping";
-5;
-"bob" + " " + "hoskins"
-4 * 2</code></pre>
-					<p>Anything you type into the REPL/console which does not result in an error is a valid expression.</p>
+					<h2>Comments</h2>
+					<p>Comments allow us to add descriptive text to our code and are ignored when the code is run.</p>
+					<pre><code data-trim contenteditable>
+// This is a single line comment
+
+/*
+This comment spans
+more than one line
+*/
+                    </code></pre>
 				</section>
 
 				<section>
 					<h2>Values</h2>
-					<p>A <span class="value">value</span> is a single piece of data.</p>
+					<p>A <span class="value">value</span> is a single piece of data in your code.</p>
 					<ul>
 						<li class="fragment">The name of a task: "<span class="value">Grocery Shopping</span>"</li>
 						<li class="fragment">Whether or not the task is completed: <span class="value">true</span> or <span class="value">false</span></li>
@@ -308,8 +311,19 @@ document.body.innerHTML += 'Hello!'; // Add html inside &lt;body&gt;
 				</section>
 
 				<section>
+					<h2>Expressions</h2>
+                    <p>An expression is a piece of code that can be evaluated to a <span class="value">value</span>. Each line in following example is an expression.</p>
+					<pre><code data-trim contenteditable>var taskName = "Grocery shopping";
+5;
+"bob" + " " + "hoskins"
+4 * 2</code></pre>
+					<p>Anything you type into the REPL/console which does not result in an error is a valid expression.</p>
+				</section>
+
+
+				<section>
 					<h2>Types of Values (Data Types)</h2>
-					<p>Programming languages categorize <span class="value">values</span> into <span class="type">types</span>.</p>
+					<p>Programming languages categorize <span class="value">values</span> into <span class="type">types</span> based on the kind of information being represented.</p>
 					<ul>
 						<li class="fragment"><span class="type">String</span>: "<span class="value">Grocery Shopping</span>"</li>
 						<li class="fragment"><span class="type">Boolean</span>: <span class="value">true</span> or <span class="value">false</span></li>
@@ -328,6 +342,8 @@ document.body.innerHTML += 'Hello!'; // Add html inside &lt;body&gt;
 'Reread "To Kill a Mockinbird"'
 "Give the dog a bath"
 "Pick up dad's gift"
+'That\'s it, I\'ve had enough!'
+"\"I am quite tired\", she said"
 </code></pre>
 				</section>
 
@@ -345,9 +361,17 @@ document.body.innerHTML += 'Hello!'; // Add html inside &lt;body&gt;
 				<section>
 					<h2>Booleans</h2>
 					<p>A boolean is a yes/no value. It is written as either true or false, without any quotes.</p>
-					<pre><code data-trim contenteditable>true
+					<pre><code data-trim contenteditable>
+true
 false
-</code></pre>
+                    </code></pre>
+                    <p>Booleans are useful for executing code only if certain conditions are met.</p>
+					<pre><code data-trim contenteditable>
+var taskIsComplete = false;
+if (taskIsComplete) {
+    alert('We are done here!'); // This code does not run
+}
+                    </code></pre>
 				</section>
 
 				<section>
@@ -359,9 +383,11 @@ false
 				<section>
 					<h2>Creating Variables</h2>
 					<p>You create a <span class="variable">variable</span> by using the var keyword.<br />You decide on the name.</p>
-					<pre><code data-trim contenteditable>var taskName = "Grocery Shopping";
+					<pre><code data-trim contenteditable>
+var taskName = "Grocery Shopping";
 var taskIsComplete = false;
-var taskPriority = 1;</code></pre>
+var taskPriority = 1;
+                    </code></pre>
 				</section>
 
 				<section>
@@ -378,13 +404,17 @@ var taskPriority = 1;</code></pre>
 				<section>
 					<h2>Changing Variable Values</h2>
 					<p>You can change a variable's value after creating it by assigning a value using the equals sign. The code below creates a variable called <span class="variable">taskName</span> with the value <span class="value">"Grocery Shopping"</span> and then changes the value to <span class="value">"Dog grooming"</span>.</p>
-					<pre><code data-trim contenteditable>var taskName = "Grocery Shopping";
-taskName = "Dog grooming";</code></pre>
+					<pre><code data-trim contenteditable>
+var taskName = "Grocery Shopping";
+console.log(taskName); // "Grocery shopping"
+taskName = "Dog grooming";
+console.log(taskName); // "Dog grooming"
+                    </code></pre>
 				</section>
 
 				<section>
 					<h2>Referencing Variables in Code</h2>
-					<p>Once you have created a variable you can reference it in code just by using the name.</p>
+                    <p>Once you have created a <span class="variable">variable</span> you can refer to its <span class="value">value</span> in your code by using the variable name.</p>
 					<pre><code data-trim contenteditable class="javascript">
 var age = 21;
 var ageInMonths = age * 12;
@@ -394,12 +424,12 @@ console.log(ageInMonths); // Prints the result of 21 times 12
 
 				<section>
 					<h2>Variable Exercises</h2>
-                    <p>Use console.log to check the value of your variables</p>
+                    <p>Create some variables, use console.log to check the values</p>
 					<ol>
-						<li>Create a variable called taskName with the value of the name of a task that needs to be completed</li>
-						<li>Create a variable called incompleteTasks with a value of 4</li>
-						<li>Create a variable called completeTasks with a value of 3</li>
-						<li>Create a variable called totalTasks with a value of incompleteTasks + completeTasks</li>
+                        <li>Create a variable called <span class="variable">taskName</span> with the value of the name of a task (a <span class="type">string</span> like <span class="value">"Write some code"</span>)</li>
+                        <li>Create a variable called <span class="variable">incompleteTasks</span> with a value of <span class="value">4</span></li>
+                        <li>Create a variable called <span class="variable">completeTasks</span> with a value of <span class="value">3</span></li>
+                        <li>Create a variable called <span class="variable">totalTasks</span> with a value of <span class="variable">incompleteTasks</span> + <span class="variable">completeTasks</span></li>
 						<li>Create a variable with a name of your choice and do not assign it a value. What value is it given? (hint: use console.log to find out)</li>
 						<li>Create a variable with the name if and assign it any value. What happened?</li>
 					</ol>
@@ -407,7 +437,7 @@ console.log(ageInMonths); // Prints the result of 21 times 12
 
 				<section>
 					<h2>Operators</h2>
-					<p><span class="operator">Operators</span> are special symbols that we can use to compare, modify or combine values. </p>
+                    <p><span class="operator">Operators</span> are special symbols that we can use to compare, modify or combine <span class="value">values</span>. </p>
 				</section>
 
 				<section>
@@ -470,7 +500,7 @@ console.log(ageInMonths); // Prints the result of 21 times 12
 				<section>
 					<h2>Number Exercises</h2>
 					<ol>
-						<li>Add 2 numbers, store the result in a variable called sum</li>
+                        <li>Add 2 numbers, store the result in a variable called <span class="variable">sum</span></li>
 						<li>Multiply 2 numbers together</li>
 						<li>Subtract 1 number from another</li>
 						<li>Divide one number by another</li>
@@ -484,7 +514,7 @@ console.log(ageInMonths); // Prints the result of 21 times 12
 				</section>
 				<section>
 					<h2>String Operators: +</h2>
-					<p>The <span class="operator">+</span> operator behaves differently when used with string values than numbers. It will combine them together into a new string.</p>
+                    <p>The <span class="operator">+</span> operator behaves differently when used with <span class="type">string</span> values than with numbers. It will combine them together into a new string.</p>
 					<pre><code data-trim contenteditable class="javascript">
 var kittensFirstName = 'Bing';
 var kittensLastName = 'Crosby';
@@ -507,23 +537,24 @@ console.log(kittensName); // 'Fluffy McDougle'
 				<section>
 					<h2>String Exercises</h2>
 					<ol>
-                        <li>Combine 2 strings together use the <span class="operator">+</span> operator</li>
-						<li>Combine 2 strings together with a space in the middle</li>
-						<li>Combine a string and a number. What did you learn?</li>
-						<li>Combine a number in quotes and a number not in quotes. what did you learn?</li>
-						<li>Try using one of the operators than <span class="operator">+</span> with 2 strings, what happens?</li>
-						<li>Create a string that includes single quotes</li>
-						<li>Create a string that includes double quotes</li>
-						<li>Divide a number in quotes by a number not in quotes, what did we learn? Try other operators (*, %)</li>
+                        <li>Combine 2 <span class="type">strings</span> together use the <span class="operator">+</span> operator</li>
+                        <li>Combine 2 <span class="type">strings</span> together with a space in the middle</li>
+                        <li>Combine a <span class="type">string</span> and a <span class="type">number</span>. What did you learn?</li>
+                        <li>Combine a <span class="type">number</span> (e.g. <span class="value">5</span>) and a <span class="type">number</span> <span class="type">string</span> (e.g. <span class="value">"5"</span>). What did you learn?</li>
+                        <li>Combine a <span class="type">number</span> in quotes and a <span class="type">number</span> not in quotes. what did you learn?</li>
+                        <li>Try using one of the operators than <span class="operator">+</span> with 2 <span class="type">strings</span>, what happens?</li>
+                        <li>Create a <span class="type">string</span> that includes single quotes</li>
+                        <li>Create a <span class="type">string</span> that includes double quotes</li>
+                        <li>Divide a <span class="type">number</span> in quotes by a <span class="type">number</span> not in quotes, what did we learn? Try other operators (*, %)</li>
 						<li>Cause an error, what error did you see and why?</li>
 					</ol>
 				</section>
 
 				<section>
 					<h2>Functions</h2>
-                    <p>Functions are reusable pieces of code. Once we define a function we can use it over and over.</p>
-                    <p>Functions take some kind of input and return some output.</p>
-                    <p>For example an <strong>add</strong> function would take 2 numbers as input and return the sum as output.</p>
+                    <p><span class="function">Functions</span> are reusable pieces of code. Once we define a function we can use it over and over.</p>
+                    <p>Functions often take some input values and return some output value.</p>
+                    <p>For example an <span class="function">add</span> function would take 2 numbers as input and return the sum as output.</p>
 					<pre><code data-trim contenteditable class="javascript">
 var add = function(number1, number2) {
     return number1 + number2;
@@ -533,16 +564,14 @@ var add = function(number1, number2) {
 
 				<section>
 					<h2>Calling Functions</h2>
-                    <p>Once a function has been defined, you can call it by typing the function name followed by parentheses.</p>
-                    <p>If the function takes any input, you can place it inside the parentheses.</p>
-                    <p>If the function returns any output using the return keyword, you can store it in a variable</p>
+                    <p>To run the code inside a function, <strong>call</strong> the function using the function name followed by parentheses.</p>
+                    <p>If the function takes any input values, they are placed inside the parentheses and separated by commas.</p>
+                    <p>If the function returns any output value, you can store the value in a variable.</p>
 					<pre><code data-trim contenteditable class="javascript">
 var add = function(number1, number2) {
     return number1 + number2;
 }
-
 var result = add(5, 10);
-
 console.log(result); // 15
                     </code></pre>
 				</section>
@@ -571,6 +600,7 @@ var add = function(number1, number2) {
 }
 
 var sum = add(5, 10);
+console.log(sum);
 console.log(add(2, 3));
                     </code></pre>
                 </section>
@@ -590,24 +620,26 @@ console.log(add(2, 3));
 
 				<section>
 					<h2>Exercise: fullName function</h2>
+                    <p>Create a <span class="function">fullName</span> function to combine a first and last name.</p>
                     <ol>
                         <li>Create a function called <span class="function">fullName</span>.</li>
                         <li><span class="function">fullName</span> should take 2 arguments: <span class="argument">firstName</span> and <span class="argument">lastName</span>.</li>
                         <li><span class="function">fullName</span> should combine <span class="argument">firstName</span> and <span class="argument">lastName</span> together with
                         a space in between and return the result.</li>
-                        <li>Define a variable called <span class="variable">myFirstName</span> with a value of your first name.</li>
+                        <li>Outside the function, define a variable called <span class="variable">myFirstName</span> with a value of your first name.</li>
                         <li>Define a variable called <span class="variable">myLastName</span> with a value of your last name.</li>
-                        <li>Call the function with your <span class="variable">myFirstName</span> and <span class="variable">myLastName</span> as arguments and store the result in a variable called <span class="variable">myFullName</span></li>
+                        <li>Call the function with <span class="variable">myFirstName</span> and <span class="variable">myLastName</span> as arguments and store the result in a variable called <span class="variable">myFullName</span></li>
                         <li>Call console.log, passing in the <span class="variable">myFullName</span> variable to see the result.</li>
                     </ol>
                 </section>
 
 				<section>
 					<h2>Exercise: renderTask function</h2>
+                    <p>Create a <span class="function">renderTask</span> function to show a task name inside the &lt;body&gt; wrapped in &lt;li&gt; tags.</p>
                     <ol>
                         <li>Create a function called <span class="function">renderTask</span>.</li>
                         <li><span class="function">renderTask</span> should take 1 argument: <span class="argument">taskName</span></li>
-                        <li><span class="function">renderTask</span> should wrap &lt;li&gt; tags around <span class="argument">taskName</span> 
+                        <li><span class="function">renderTask</span> should create a <span class="type">string</span> that wraps &lt;li&gt; tags around <span class="argument">taskName</span> 
                         and store the result in a variable called <span class="variable">taskHtml</span></li>
                         <li>Use the <span class="operator">+=</span> operator to add <span class="variable">taskHtml</span> to document.body.innerHTML</li>
                         <li>Call the function <span class="function">renderTask</span> multiple times, each time passing in a task name as the argument.</li>
@@ -627,6 +659,20 @@ renderTask('Grocery shopping');
 renderTask('Walk the dog');
                     </code></pre>
                 </section>
+
+				<section>
+					<h2>Exercise: Calculator Functions</h2>
+                    <p>Create a set of functions which a calculator program could use to do basic math.</p>
+                    <ol>
+                        <li>add</li>
+                        <li>subtract</li>
+                        <li>multiply</li>
+                        <li>divide</li>
+                        <li>remainder</li>
+                        <li>power</li>
+                    </ol>
+                </section>
+
 
 			</div>
 
