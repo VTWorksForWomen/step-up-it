@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+
+        {% if page.codepen_slug|default(false) %}
+            <h2>Solution</h2>
+            <div data-height="500" data-theme-id="0" data-slug-hash="{{page.codepen_slug}}" data-default-tab="js" data-user="benglass" class='codepen'><p>See the Pen <a href='http://codepen.io/cssgirl/pen/{{page.codepen_slug}}/'>dPdxax</a> by Ben Glassman</p></div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% include footer.html %}
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+  </body>
+
+</html>
