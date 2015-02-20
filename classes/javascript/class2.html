@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to Programming with Javascript</title>
+
+		<meta name="author" content="Ben Glassman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/suit.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+        <!-- Opening slide -->
+
+            <section>
+                <h1>Intro to Programming<br /><small>with</small> Javascript</h1>
+                <p>Conditionals, Loops and Arrays</p>
+                <p>
+                    <small>Created by <a href="http://benglassman.com">Ben Glassman</a> / <a href="http://github.com/benglass">github.com/benglass</a></small>
+                </p>
+            </section>
+
+
+            <section>
+                <h3>Review</h3>
+                <p>In this code, spot the <span class="comment">comments</span>, <span class="variable">variables</span>, <span class="operator">operator</span>, <span class="function">function</span>, <span class="argument">argument</span>, and return <span class="value">value</span>.</p>
+                <pre><code data-trim contenteditable>
+function calculateTip(total) {
+    var tipPercent = 0.15; //Can be changed
+    return total * tipPercent;
+}
+
+var billPreTip = 10;
+var billTip   = calculateTip(billPreTip);
+var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip + 
+    ' Total: ' + (billPreTip + billTip);
+console.log(receipt); 
+				</code></pre>
+            </section>
+    
+            <section>
+                <h3>Boolean Variables</h3>
+                <p><span class="type">Boolean</span> variables represent the logical values True and False</p>
+                <pre><code data-trim contenteditable>
+var taskIsComplete = true;
+var taskIsDeleted = false;
+				</code></pre>                
+                <p>If you try to use another variable as a <span class="type">boolean</span>, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
+            </section>
+
+            <section>
+                <h3>The if statement</h3>
+                <p>Use if to decide which lines of code to execute, based on a condition.</p>
+                <pre><code data-trim contenteditable class="javascript">
+var taskIsComplete = true;
+if (taskIsComplete) {
+  alert('Its done!'); // This code runs
+}
+				</code></pre>
+                <pre><code data-trim contenteditable class="javascript">
+var numberOfTasks = 5;
+if (numberOfTasks === 0) {
+  console.log('You finished all your tasks'); // Doesnt run
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Comparison Operators</h3>
+                <table class="smalltext">
+                    <thead>
+                      <tr>
+                        <th width="150px">Example</th>
+                        <th width="250px">Name</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                      <td>5 <span class="operator">==</span> "5"</td>
+                       <td>Equal</td>
+                       <td><strong class="value fragment">true</strong></td>
+                      </tr>
+                      <tr>
+                          <td>5 <span class="operator">===</span> "5"</td>
+                       <td>Identical</td>
+                       <td>
+                        <strong class="value fragment">false</strong></td>
+                      </tr>
+                      <tr>
+                          <td>0 <span class="operator">!=</span> false</td>
+                       <td>Not equal</td>
+                       <td><strong class="value fragment">false</strong></td>
+                      </tr>
+                      <tr>
+                          <td>0 <span class="operator">!==</span> false</td>
+                       <td>Not identical</td>
+                       <td>
+                        <strong class="value fragment">true</strong></td>
+                      </tr>
+                      <tr>
+                      <td>5 <span class="operator">&lt;</span> 10</td>
+                       <td>Less than</td>
+                       <td><strong class="value fragment">true</strong></td>
+                      </tr>
+                      <tr>
+                          <td>5 <span class="operator">&gt;</span> 10</td>
+                       <td>Greater than</td>
+                       <td><strong class="value fragment">false</strong></td>
+                      </tr>
+                      <tr>
+                          <td>"a" <span class="operator">&lt;=</span> "b"</td>
+                       <td>Less than or equal to </td>
+                       <td><strong class="value fragment">true</strong></td>
+                      </tr>
+                      <tr>
+                          <td>"a" <span class="operator">&gt;=</span> "b"</td>
+                       <td>Greater than or equal to </td>
+                       <td><strong class="value fragment">false</strong></td>
+                      </tr>
+                    </tbody>    
+                </table>          
+			</section>
+            <section>
+                <h3>Watch out!</h3>
+                <p>Don't mix up <span class="operator">=</span> and <span class="operator">==</span></p>
+                <pre><code data-trim contenteditable>
+var numberOfTasks = 5;
+if (numberOfTasks = 10) {
+    alert('There are 10 tasks'); // This will always run
+}
+                </code></pre>                
+            </section>
+            <section>
+				<h3>Conditional Excercises</h3>
+                <ol>
+                    <li>Create a variable called <span class="variable">numberOfCompleteTasks</span> with a value of <span class="value">5</span></li>
+                    <li>Create a variable called <span class="variable">totalNumberOfTasks</span> with a value of <span class="value">10</span></li>
+                    <li>Create a variable called <span class="variable">numberOfRemainingTask</span> and give it the value of <span class="variable">totalNumberOfTasks</span> minus <span class="variable">numberOfCompleteTasks</span></li>
+                    <li>Write an if statement that tells you to go outside and get some fresh air if there are no remaining tasks.</li>
+                    <li>Change the values of your variables to get your message to display</li>
+			</section>
+
+            <section>
+                <h3>The if/else statement</h3>
+                <p>Use else to provide an alternate set of instructions.</p>
+                <pre><code data-trim contenteditable class="javascript">
+var numberOfTasks = 5;
+if (numberOfTasks === 0) {
+  console.log('You finished all your tasks');
+} else {
+  console.log('Back to work!');
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>The if/else if/else statement</h3>
+                <p>If you have multiple conditions, you can use else if.</p>
+                <pre><code data-trim contenteditable class="javascript">
+var numberOfTasks = 5;
+if (numberOfTasks === 0) {
+  console.log('You finished all your tasks');
+} else if (numberOfTasks === 1) {
+  console.log('Only one more to go!');
+} else {
+  console.log('Back to work!');
+}
+				</code></pre>
+            </section>
+             <section>
+				<h3>If/Else If/Else Exercises</h3>
+                <p>Modify the message from your "get some fresh air" code for these conditions:</p>
+                <ol>
+                    <li>If there are no more tasks, get some fresh air.</li>
+                    <li>If there is are more than 10 tasks remaining, get some friends to help</li>
+                    <li>If there there only 1 task remaining, show a motivational message</li>
+                    <li>Otherwise, get back to work.</li>
+                </ol>
+			</section>
+            <section>
+				<h3>Logical Operators</h3>
+                <table>
+                    <thead>
+                      <tr>
+                        <th width="200px">Example</th>
+                        <th width="150px">Name</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>5 <span class="operator">&amp;&amp;</span> 0</td>
+                       <td>And</td>
+                       <td>
+                           <span class="value fragment">false</span>
+                       </td>
+                      </tr>
+                      <tr>
+                      <td>5 <span class="operator">||</span> 0</td>
+                       <td>Or</td>
+                       <td>
+                           <span class="value fragment">true</span>
+                       </td>
+                      </tr>
+                      <tr>
+                      <td><span class="operator">!</span> 0</td>
+                       <td>Not</td>
+                       <td>
+                           <span class="value fragment">true</span>
+                       </td>
+                      </tr>
+                     </tbody>    
+                </table>          
+			</section>
+            <section>
+                <h3>Using logical operators</h3>
+                <p>You can use these operators to combine conditions.</p>
+                <pre><code data-trim contenteditable>
+var taskIsComplete = false;
+var numberOfRemainingTasks = 5;
+if (taskIsComplete && numberOfRemainingTasks === 0) {
+    console.log('You just finished your last task!');
+} else {
+    console.log('You still have some tasks left');
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Logical Operator Exercise</h3>
+                <ol>
+                    <li>Enter an expression in the console that uses <span class="operator">&&</span> and evaluates to <span class="value">true</span></li>
+                    <li>Enter an expression in the console that uses <span class="operator">||</span> and evaluates to <span class="value">true</span></li>
+                    <li>Enter an expression in the console that uses <span class="operator">!</span> and evaluates to <span class="value">true</span></li>
+                    <li>Enter an expression in the console that uses <span class="operator">&&</span> and evaluates to <span class="value">false</span></li>
+                    <li>Enter an expression in the console that uses <span class="operator">||</span> and evaluates to <span class="value">false</span></li>
+                    <li>Enter an expression in the console that uses <span class="operator">!</span> and evaluates to <span class="value">false</span></li>
+                </ol>
+			</section>
+
+            <section>
+                <h3>For loops</h3>
+                <p>For loops allow you to execute a defined number of times.</p>
+                <pre><code data-trim contenteditable>
+//will count 1 to 10
+for (var i = 1; i &lt;= 10; i++) {
+    console.log(i); 
+}
+				</code></pre>
+                <p>For loops include 3 things: A starting value (i = 1), a conditional that determines whether the loop should run before each iteration (i < 10), and some code that should be run at the end of each iteration (i++).</p>
+            </section>
+            <section>
+                <h3>Loops and logic</h3>
+                <p>You can add other statements or logical operators inside the loops.</p>
+                <pre><code data-trim contenteditable>
+//Count from 1 to 50
+for (var i = 1; i &lt;= 50; i++) {
+    console.log(i);       
+    //Says 'Buzz' after multiples of three
+    if (i % 3 == 0) {
+        console.log(' Buzz');
+    }        
+    //Says 'Bang' after multiples of five
+    if (i % 5 == 0) {
+        console.log(' Bang');
+    }
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Break</h3>
+                <p>To exit a loop, use the break statement.</p>
+                <pre><code data-trim contenteditable>
+//Count from 100 to 200              
+for (var i = 100; i &lt;= 200; i++) {
+    console.log('Testing ' + i);
+    //Stop at the first multiple of 7
+    if (i % 7 == 0) {
+        console.log('Found it! ' + i);
+        break;
+    }
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>For Loop Exercises</h3>
+                <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
+                <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
+			</section>
+
+            <section>
+                <h3>Arrays</h3>
+                <p>Arrays are ordered lists of <span class="value">values</span>.</p>
+                <pre><code data-trim contenteditable>
+var tasks = ['Groceries', 'Wash the dog', 'Learn to program'];
+				</code></pre>
+                <p>You can put different <span class="type">types</span> of data into an array.</p>
+                <pre><code data-trim contenteditable>
+var colors = ['Red', 'Orange', 'Yellow', 'Green'];
+var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+				</code></pre>
+            </section>
+            <section>
+                <h3>Array Length</h3>
+                <p>The length property tells you how many things are in an array</p>
+                <pre><code data-trim contenteditable>
+var tasks = ['Groceries', 'Wash the dog', 'Learn to program'];
+console.log('There are ' + tasks.length ' tasks');
+				</code></pre>                
+            </section>
+            <section>
+                <h3>Using Arrays</h3>
+                <p>You can access items with "bracket notation" by using the position of the object you want. Computers start counting at zero.</p>
+                <pre><code data-trim contenteditable class="javascript">
+var tasks = ['Groceries', 'Wash the dog', 'Learn to program'];
+var firstTask = tasks[0];
+var lastTask = tasks[2];
+				</code></pre>                
+            </section>
+            <section>
+                <h3>Changing arrays</h3>
+                <p>You can use bracket notation to change an item in an array</p>
+                <pre><code data-trim contenteditable>
+var tasks = ['Groceries', 'Wash the dog', 'Learn to program'];
+tasks[0] = 'Get some sleep';
+                </code></pre>
+            </section>
+            <section>
+                <h3>Add items to arrays</h3>
+                <p>You can use "push" to add a value to an array.</p>
+                <pre><code data-trim contenteditable>
+var tasks = ['Get some sleep', 'Wash the dog', 'Learn to program'];
+tasks.push('Call your mum');
+                </code></pre>
+            </section>
+            <section>
+				<h3>Arrays Exercise</h3>
+                <p>Create an array of tasks to complete. Echo a few values onto your screen.</p> 
+			</section>
+
+            <section>
+                <h3>Iterating through arrays</h3>
+                <p>Use a for loop to easily process each item in an array.</p>
+                <pre><code data-trim contenteditable>
+var tasks = ['Get some sleep', 'Wash the dog', 'Learn to program'];
+for (var i = 0; i &lt; tasks.length; i++) {
+  console.log(tasks[i]);
+}              
+                </code></pre>
+            </section>
+            <section>
+				<h3>Arrays Exercise</h3>
+                <p>Use a loop to print the names of your tasks to the console.</p> 
+			</section>            
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
