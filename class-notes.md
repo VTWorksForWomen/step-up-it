@@ -9,8 +9,8 @@ permalink: /class-notes/
 	<li><a href="#class8">Class 8</a></li>
 	<li><a href="#class11">Class 11</a></li>
 	<li><a href="#class14">Class 14</a></li>
-	<li><a href="#Class15">Class 15</a></li>
-	<li><a href="#Class16">Class 16</a></li>
+	<li><a href="#class15">Class 15</a></li>
+	<li><a href="#class16">Class 16</a></li>
 </ul>
 </nav>
 
