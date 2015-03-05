@@ -437,8 +437,8 @@ We talked about CSS resets and using them to start from the same(ish) space rega
 - [Intro to Programming with JavaScript: Class 2]({{ site.baseurl }}/classes/javascript/class2.html)
 
 
-## <span id="class15">Class 15: Girl Develop It and Networking with Maureen McElaney<span>
+## <span id="class15">Class 15: Girl Develop It and Networking with Maureen McElaney</span>
 <a href="https://docs.google.com/presentation/d/1uPS794hj4wQrT8iCdEUz9-URNQGEnY0DlgcjjrCMtq8/edit#slide=id.p3"> Girl Develop It slide show</a> 
 
-## <span id="class16">Class 16: Program Management and the Story of C2<span>
+## <span id="class16">Class 16: Program Management and the Story of C2</span>
 C2 presentation slide show
