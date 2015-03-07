@@ -311,31 +311,9 @@ renderTaskList(taskList);
 			  </code></pre>
             </section>            
 
-			<section>
-			  <h3>Review: Anatomy of a website</h3>
-			  <div class = "blue"> Your Content</div>
-			  <div><span class = "blue">+ HTML: </span>Structure</div>
-			  <div><span class = "blue">+ CSS: </span>Presentation</div>
-			  <div class = "blue">= Your Website</div>
-			  <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
-			</section>
-
             <section>
-			<h3>IDs vs. Classes</h3>
-				<div class = "left-align">
-				  <span class = "yellow">ID</span> -- Should only apply to one element on a webpage, e.g., A webpage only has one footer.
-				  <p>The "#" is how you tell CSS "this is an id."</p>
-				</div>
-				<div class = "left-align">
-				  <span class = "yellow">Class</span> -- Lots of elements can have the same class, e.g., There can be many warnings on one webpage.
-				  <p>The "." is how you tell CSS "this is a class name."</p>
-				</div>
-			</section>
-	
-
-            <section>
-              <h3>The DOM Tree</h3>
-              <p>We model the nested structure of an HTML page with the DOM (Document Object Model) Tree. The browser makes a "map" of all the elements on a page.</p>
+              <h3>The Document Object Model (DOM)</h3>
+              <p>The structure of an HTML page is represented by browsers and javascript using the DOM (Document Object Model). The DOM gives us a way to access and modify the HTML.</p>
             </section>
             <section>
               <h3>The DOM: Sample Code</h3>
@@ -359,40 +337,60 @@ renderTaskList(taskList);
 				</code></pre>
             </section>
             <section>
-              <h3>The DOM: Sample Model</h3>
-              <img src="images/dom-tree.png" alt="Simple DOM Tree"/>
+				<h3>DOM: The document object</h3>
+				<p>The web browser creates an variable called document that holds an object which represents the DOM for the HTML page. The document object has properties that allow us to access and modify parts of the HTML page.</p>
+              <pre><code data-trim contenteditable class="javascript">
+console.log(document.head); // The &lt;head&gt; tag
+console.log(document.title); // Contents of the title tag
+console.log(document.head.children); // Array of the html tags inside the &lt;head&gt;
+console.log(document.body); // The body tag
+console.log(document.body.innerHTML); // The HTML inside the body tag
+			  </code></pre>
+            </section>
+
+            <section>
+				<h3>DOM Exercises</h3>
+				<ol>
+					<li>Change the title of the page by setting the title property of the document object</li>
+					<li>Change the contents of the body tag by setting the innerHTML property of document.body</li>
+					<li>Use the console to find out what the irst html element inside the body tag is using body.children</li>
+				</ol>
             </section>
           
         <!--Accessing the DOM-->
   
             <section>
-              <h3>DOM Access</h3>
-              <p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
-              <ol>
-                <li>Find the DOM node and store it in a variable</li>
-                <li>Use methods to manipulate the node</li>
-              </ol>
-            </section>
-            <section>
-              <h3>DOM Access: By Id</h3>
-              <p>You can find nodes by id using the method:</p>
+              <h3>Find HTML Elements using DOM: By Id</h3>
+              <p>You can find HTML elements by id using the method:</p>
               <pre><code data-trim contenteditable class="javascript">
-document.getElementById(id);
+document.getElementById('id');
 			  </code></pre>
               <p>To find:</p>
-              <pre><code data-trim contenteditable class="javascript">
-&lt;img id="kittenPic" src="http://placekitten.com/200/300" alt="cat"/&gt;
+              <pre><code data-trim contenteditable class="html">
+<div id="task-list"></div>
 			  </code></pre>
               <p>We would use:</p>
               <pre><code data-trim contenteditable class="javascript">
-var imgKitten = document.getElementById('kittenPic');
+var taskListElement = document.getElementById('task-list');
 			  </code></pre>
             </section>
+
+            <section>
+				<h3>Exercise: getElementById</h3>
+				<ol>
+					<li>Add a div tag with an id of "task-list" to your html</li>
+					<li>Before the last line of the renderTask function, find the task list div by id and store it in a variable called <span class="variable">taskListElement</span></li>
+					<li>Update the last line of the renderTaskList function to add the task html to taskListElement instead of the body tag.</li>
+				</ol>
+            </section>
+          
+        <!--Accessing the DOM-->
+  
             <section>
               <h3>DOM Access: By Tag Name</h3>
-              <p>You can certain types of HTML elements using this method:</p>
+              <p>You can find all HTML elements based on tag (All paragraph tags) using this method:</p>
               <pre><code data-trim contenteditable class="javascript">
-document.getElementsByTagName(tagName);
+document.getElementsByTagName('p');
 			  </code></pre>
               <p>To find:</p>
               <pre><code data-trim contenteditable class="javascript">
@@ -412,12 +410,12 @@ for (var i =0; i &lt; listItems.length; i++) {
               <p>In newer browsers, you can use other methods too.</p>
               <p>Available in <a href="http://caniuse.com/#search=getElementsByClassName">IE9+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
               <pre><code data-trim contenteditable class="javascript">
-document.getElementsByClassName(className);
+document.getElementsByClassName('is-complete');
 			  </code></pre>
               <p>Available in <a href="http://caniuse.com/#search=querySelectorAll">IE8+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
               <pre><code data-trim contenteditable class="javascript">
-document.querySelector(cssQuery);
-document.querySelectorAll(cssQuery);
+document.querySelector('.some-class'); // Find the first matching element
+document.querySelectorAll('.another-class'); // Find all matching elements
 			  </code></pre>
             </section>
             <section>
@@ -436,131 +434,109 @@ var specficParagraph = document.getElementsByTagName('p')[2];
             <section>
               <h3>DOM Nodes: Attributes</h3>
               <p>You can access and change attributes of DOM nodes using dot notation.</p>
-              <p>To change this element:</p>
+              <p>To get this text box value:</p>
               <pre><code data-trim contenteditable class="javascript">
-&lt;img id="kittenPic" src="http://placekitten.com/200/300" alt="cat"/&gt;
+&lt;input type="text" class="task-name-field" value="User entered value" /&gt;
 			  </code></pre>
-              <p>We could change the src attribute this way:</p>
+              <p>We could get the value attribute this way:</p>
               <pre><code data-trim contenteditable class="javascript">
-var imgKitten = document.getElementById('kittenPic');
-var oldSrc = imgKitten.src;
-imgKitten.src = 'http://placekitten.com/100/500';
-			  </code></pre>
-            </section>
-            <section>
-              <h3>DOM Nodes: Getting and Setting Attributes</h3>
-              <p>You can also use <code data-trim contenteditable class="javascript">getAttribute/setAttribute</code></p>
-              <pre><code data-trim contenteditable class="javascript">
-&lt;img id="kittenPic" src="http://placekitten.com/200/300" alt="cat"/&gt;
-			  </code></pre>
-              <p>We could change the src attribute this way:</p>
-              <pre><code data-trim contenteditable class="javascript">
-var imgKitten = document.getElementById('kittenPic');
-var oldSrc = imgKitten.getAttribute('src');
-imgKitten.setAttribute('src', 'http://placekitten.com/100/500');
+var taskNameField = document.querySelector('.task-name-field');
+console.log(taskNameField.value);
 			  </code></pre>
             </section>
-            <section>
-              <h3>DOM Nodes: Styles</h3>
-              <p>You can change page css using<code data-trim contenteditable class="javascript">style</code></p>
-              <p>To make this CSS:</p>
-              <pre><code data-trim contenteditable class="javascript">
-body {
-  color: red;
-}
-			  </code></pre>
-              <p>Use this JavaScript:</p>
-              <pre><code data-trim contenteditable class="javascript">
-var pageNode = document.getElementsByTagName('body')[0];
-pageNode.style.color = 'red';
-			  </code></pre>
-            </section>
-            <section>
-              <h3>DOM Nodes: More Styles</h3>
-              <p>Change any CSS property with a "-" to camelCase, and be sure to include a unit on any number</p>
-              <p>To make this CSS:</p>
-              <pre><code data-trim contenteditable class="javascript">
-body {
-  background-color: pink;
-  padding-top: 10px;
-}
-			  </code></pre>
-              <p>Use this JavaScript:</p>
-              <pre><code data-trim contenteditable class="javascript">
-var pageNode = document.getElementsByTagName('body')[0]
-pageNode.style.backgroundColor = 'pink';
-pageNode.style.paddingTop = '10px';
-			  </code></pre>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Create a simple HTML page or <a href="files/class3.zip">use this sample code</a>.</p>
-                <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p> 
-			</section>       
 
             <section>
-              <h3>DOM innerHTML</h3>
-              <p>Each DOM node has an <code data-trim contenteditable class="javascript">innerHTML</code> property with the HTML of all its children. You can use the property to view or change the HTML of a node.</p>
-              <p>For example, you can overwrite the entire body:</p>
-              <pre><code data-trim contenteditable class="javascript">
-var pageNode = document.getElementsByTagName('body')[0];
-pageNode.innerHTML = '&lt;h1&gt;Oh Noes!&lt;/h1&gt; &lt;p&gt;I just changed the whole page!&lt;/p&gt;'
-			  </code></pre>
-              <p>Or just add some new content to the end</p>
-              <pre><code data-trim contenteditable class="javascript">
-pageNode.innerHTML += '...just adding this bit at the end of the page.';
-			  </code></pre>
+              <h3>Exercise: Attributes</h3>
+			  <ol>
+				  <li>Add a text field to the top of your page.</li>
+				  <li>Give the form field a class of "task-name-field"</li>
+				  <li>Use document.querySelector to find the element by class name and store it in a variable called taskNameField</li>
+				  <li>Change the value of the field by typing into in your browser</li>
+				  <li>Access the value property of the taskNameField variable in the console to see the updated value</li>
+				  <li>Write a function called getTaskNameFieldValue that returns the value of the task name field. Call this function in the console. Try typing in the text field and calling the function again.</li>
+			  </ol>
             </section>
-            <section>
-              <h3>DOM innerHTML continued</h3>
-              <p>You can also target a particular element</p>
-              <p>To fill this HTML element:</p>
-              <pre><code data-trim contenteditable class="javascript">
-&lt;p id="warning"&gt;&lt;/p&gt;
-			  </code></pre>
-              <p>We can select the node and modify it</p>
-              <pre><code data-trim contenteditable class="javascript">
-var warningParagraph = document.getElementById('warning');
-warningParagraph.innerHTML = 'Danger Will Robinson!';
-			  </code></pre>
-            </section>
-            <section>
-              <h3>Creating New Nodes</h3>
-              <p>The <code data-trim contenteditable class="javascript">document</code> object also provides ways to create nodes from scratch:</p>
-              <pre><code data-trim contenteditable class="javascript">
-document.createElement(tagName);
-document.createTextNode(text);
-document.appendChild();
-			  </code></pre>
-            </section>
-            <section>
-              <h3>Creating New Nodes: Sample Code</h3>
-              <pre><code data-trim contenteditable class="javascript">
-var pageNode = document.getElementsByTagName('body')[0];
 
-var newImg = document.createElement('img');
-newImg.src = 'http://placekitten.com/400/300';
-newImg.style.border = '1px solid black';
-pageNode.appendChild(newImg);
+            <section>
+              <h3>Events</h3>
+			  <p>Events happen when the user interacts with your web page. For example clicking on a link. What other events can you think of?</p>
+			  <ul class="fragment">
+				  <li><span class="event">Submit</span> a Form</li>
+				  <li class="fragment"><span class="event">Change</span> the value of a form field</li>
+				  <li class="fragment"><span class="event">Hover</span> over an HTML element</li>
+				  <li class="fragment"><span class="event">Scroll</span> up/down the page</li>
+				  <li class="fragment"><span class="event">Load</span> the page</li>
+			  </ul>
+            </section>
 
-var newParagraph = document.createElement('p');
-var paragraphText = document.createTextNode('Squee!');
-newParagraph.appendChild(paragraphText);
-pageNode.appendChild(newParagraph);
+            <section>
+              <h3>Event Handlers</h3>
+			  <p>We can run a function when events happen on an HTML element. A function that runs when an event happens is called an event handler or listener.</p>
+              <pre><code data-trim contenteditable class="javascript">
+var taskNameField = document.querySelector('.task-name-field');
+
+taskNameField.onchange = function() {
+	console.log('task name field value was changed!');
+};
 			  </code></pre>
             </section>
+
             <section>
-				<h3>Let's Develop It</h3>
-                <p>Create a new paragraph element and add it to a div on your page.</p>
-			</section> 
-			
-			<section>
-				<h3>Resources</h3>
-					<ul>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
-					</ul>
-			</section>
+              <h3>this in Event Handlers</h3>
+			  <p>Just like inside of object methods, <span class="variable">this</span> has a special meaning in event handlers. It refers to the element where the event was triggered.</p>
+              <pre><code data-trim contenteditable class="javascript">
+var taskNameField = document.querySelector('.task-name-field');
+
+taskNameField.onchange = function() {
+	console.log('Task name is :' + this.value);
+};
+			  </code></pre>
+            </section>
+
+            <section>
+              <h3>Preventing Default Behavior</h3>
+			  <p>Sometimes we need to prevent the default behavior that would occur after an event. You can do this by returning false from the event handler.</p>
+              <pre><code data-trim contenteditable class="javascript">
+var btnSubmit = document.querySelector('.btn-submit');
+
+btnSubmit.onsubmit = function() {
+	console.log('We stopped the form submission!');
+	return false;
+};
+			  </code></pre>
+			  <p>Another way of doing this is using the event object that is passed into your event handler.</p>
+              <pre><code data-trim contenteditable class="javascript">
+btnSubmit.onsubmit = function(event) {
+	console.log('We stopped the form submission!');
+	event.preventDefault();
+};
+			  </code></pre>
+            </section>
+
+
+            <section>
+              <h3>Events Exercise</h3>
+			  <ol>
+				  <li>Add a button tag after the text input with the text submit. Give it a class of btn-add task.</li>
+				  <li>Create a variable called btnSubmitTask and use the document.querySelector method to find the button we created.</li>
+				  <li>Attach an event handler to the click event of the button that does the following:
+					  <ul>
+						  <li>Gets the task name value using the getTaskNameFieldValue function we wrote</li>
+						  <li>Creates a new task using the createTask function</li>
+						  <li>Add the new task to the taskList array</li>
+						  <li>Calls renderTaskList to re-render the task list with the new task from the user.</li>
+					  </ul>
+				  </li>
+				  <li>There is a bug in the code!! try adding more tasks. We need to set the html of the task list container to be empty at the beginning of the the renderTaskList function.</li>
+				  <li>Bonus: Clear the text value from the task name field after submitting</li>
+			  </ol>
+            </section>
+
+
+            <section>
+              <h3>Events Exercise Solution</h3>
+			  <p><a href="http://codepen.io/benglass/pen/ByOpaz">CodePen</a></p>
+            </section>
 
 			</div>
 
