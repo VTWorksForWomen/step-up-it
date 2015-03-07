@@ -446,4 +446,3 @@ C2 presentation slide show
 
 - [Intro to Programming with JavaScript: Class 2 - Conditionals, Loops and Arrays]({{ site.baseurl }}/classes/javascript/class2.html)
 - [Intro to Programming with JavaScript: Class 3 - Objects and the DOM]({{ site.baseurl }}/classes/javascript/class3.html)
-

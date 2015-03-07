@@ -230,7 +230,7 @@ task.complete();
 
             <section>
               <h3>Answer: Creating Objects with Functions</h3>
-			  <p>Since functions can have return values we can write a function that creates an object for us and returns it. This keeps all of our code for creating the object in one place so it can be changed easily.</p>
+			  <p>Since functions can have return values we can write a function that creates an object and returns it. This keeps all the code for creating the object in one place so it can be changed easily.</p>
               <pre><code data-trim contenteditable class="javascript">
 var createTask = function(taskName) {
 	var task = {
@@ -253,14 +253,14 @@ var task2 = createTask('Wash the Dog');
             <section>
               <h3>Exercise: Create a Function to make task objects</h3>
 			  <ol>
-				  <li>Add a method called <span class="function">complete</span> to your task object. This function should set the <span class="property">isComplete</span> property of the task object to <span class="value">true</span></li>
-				  <li>Add a method called <span class="function">incomplete</span> to your task object. This function should set the <span class="property">isComplete</span> property of the task object to <span class="value">false</span></li>
-				  <li>Call the complete method on the first task in your task list to mark it as complete</li>
-				  <li>Call the incomplete method on the second task in your task list to mark it as incomplete</li>
-				  <li>Your task list in the browser should show tasks you have completed as having the strike through.</li>
+				  <li>Create a function called <span class="function">createTask</span> that accepts a single argument called <span class="argument">name</span></li>
+				  <li>Inside the function, create a variable called <span class="variable">task</span> and assign store a task object in it. Use the task object we created in the last exercise.</li>
+				  <li>Set the <span class="property">name</span> property of the task object we create to the <span class="argument">name</span> argument.</li>
+				  <li>Set the <span class="property">isComplete</span> property of the task object we create to false.</li>
+				  <li>On the last line of the function, return the <span class="variable">task</span> variable we created.</li>
+				  <li>Update your code that creates an array of tasks to call the <span class="function">createTask</span> function to create the task object, passing in the <span class="argument">name</span> as a string.</li>
 			  </ol>
             </section>            
-
 
             <section>
               <h3>Built-in objects</h3>
@@ -278,9 +278,37 @@ var task2 = createTask('Wash the Dog');
               <h3>Built-in Object Exercises</h3>
 			  <p>Use the built in Date object to track the date and time a task was completed.</p>
 			  <ol>
-				  <li>Update the complete method of your task object to set the dateCompleted property of the task object to a today's date by creating a new Date object.</li>
-				  <li>Update the incomplete method of your task object to set the dateCompleted property of the task to null (cant have a completed date if the task is not complete).</li>
+				  <li>Update the complete method of your task object to set the <span class="property">dateCompleted</span> property of the task object to a today's date by creating a new Date object.</li>
+				  <li>Update the incomplete method of your task object to set the <span class="property">dateCompleted</span> property of the task to null (We cant have a completed date if the task is not complete!).</li>
+				  <li>Mark the first tasks as complete by calling the complete method on it and then log the <span class="property">dateCompleted</span> property to the console.</li>
+				  <li>Mark the first tasks as incomplete by calling the incomplete method on it and then log the <span class="property">dateCompleted</span> property to the console.</li>
 			  </ol>
+            </section>            
+
+            <section>
+              <h3>Bonus Exercises</h3>
+			  <ol>
+				  <li>Create a <span class="function">renderTaskList</span> function that accepts a single argument called <span class="argument">taskList</span> which is an array of task objects. It should loop over the <span class="argument">taskList</span> and call <span class="function">renderTask</span> for each one.</li>
+			  </ol>
+            </section>            
+
+            <section>
+              <h3>Bonus Exercises: Solution</h3>
+              <pre><code data-trim contenteditable class="javascript">
+var renderTaskList = function(taskList) {
+	for (var i = 0; i < taskList.length; i++) {
+		var task = taskList[i];
+		renderTask(task);
+	}
+}
+
+var taskList = [
+	createTask('Grocery Shopping'),
+	createTask('Wash the Dog')
+];
+
+renderTaskList(taskList);
+			  </code></pre>
             </section>            
 
 			<section>
