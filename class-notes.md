@@ -11,6 +11,7 @@ permalink: /class-notes/
 	<li><a href="#class14">Class 14</a></li>
 	<li><a href="#class15">Class 15</a></li>
 	<li><a href="#class16">Class 16</a></li>
+	<li><a href="#class17">Class 17</a></li>
 </ul>
 </nav>
 
@@ -433,12 +434,16 @@ We talked about CSS resets and using them to start from the same(ish) space rega
 
 ## <span id="class14">Class 14: Introduction to Javascript</span>
 
-- [Intro to Programming with JavaScript: Class 1]({{ site.baseurl }}/classes/javascript/class1.html)
-- [Intro to Programming with JavaScript: Class 2]({{ site.baseurl }}/classes/javascript/class2.html)
-
+- [Intro to Programming with JavaScript: Class 1 - Variables, Values, Operators & Functions]({{ site.baseurl }}/classes/javascript/class1.html)
 
 ## <span id="class15">Class 15: Girl Develop It and Networking with Maureen McElaney</span>
 <a href="https://docs.google.com/presentation/d/1uPS794hj4wQrT8iCdEUz9-URNQGEnY0DlgcjjrCMtq8/edit#slide=id.p3"> Girl Develop It slide show</a> 
 
 ## <span id="class16">Class 16: Program Management and the Story of C2</span>
 C2 presentation slide show
+
+## <span id="class17">Class 17: Javascript Continued</span>
+
+- [Intro to Programming with JavaScript: Class 2 - Conditionals, Loops and Arrays]({{ site.baseurl }}/classes/javascript/class2.html)
+- [Intro to Programming with JavaScript: Class 3 - Objects and the DOM]({{ site.baseurl }}/classes/javascript/class3.html)
+
