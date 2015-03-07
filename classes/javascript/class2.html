@@ -53,32 +53,32 @@
                 <h3>Review</h3>
                 <p>In this code, spot the <span class="comment">comments</span>, <span class="variable">variables</span>, <span class="operator">operator</span>, <span class="function">function</span>, <span class="argument">argument</span>, and return <span class="value">value</span>.</p>
                 <pre><code data-trim contenteditable>
-function calculateTip(total) {
-    var tipPercent = 0.15; //Can be changed
+// Calculate a tip for a total
+var calculateTip = function(total, tipPercent) {
     return total * tipPercent;
 }
 
 var billPreTip = 10;
-var billTip   = calculateTip(billPreTip);
-var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip + 
-    ' Total: ' + (billPreTip + billTip);
-console.log(receipt); 
+var billTip = calculateTip(billPreTip);
+var billTotal = billPreTip + billTip;
+var receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip + ' Total: ' + billTotal;
+console.log(receipt);
 				</code></pre>
             </section>
     
             <section>
-                <h3>Boolean Variables</h3>
-                <p><span class="type">Boolean</span> variables represent the logical values True and False</p>
+                <h3>Boolean Values</h3>
+                <p><span class="type">Boolean</span> values represent the logical values True and False</p>
                 <pre><code data-trim contenteditable>
 var taskIsComplete = true;
 var taskIsDeleted = false;
 				</code></pre>                
-                <p>If you try to use another variable as a <span class="type">boolean</span>, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
+                <p>If you try to use another value as a <span class="type">boolean</span>, JavaScript will guess if it should be considered true or false. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
             </section>
 
             <section>
                 <h3>The if statement</h3>
-                <p>Use if to decide which lines of code to execute, based on a condition.</p>
+                <p>The if statement lets you execute code only if the condition evaluates to true.</p>
                 <pre><code data-trim contenteditable class="javascript">
 var taskIsComplete = true;
 if (taskIsComplete) {
@@ -94,6 +94,7 @@ if (numberOfTasks === 0) {
             </section>
             <section>
 				<h3>Comparison Operators</h3>
+				<p>Using a comparison operator will always result in a boolean value (true or false).</p>
                 <table class="smalltext">
                     <thead>
                       <tr>
@@ -161,6 +162,9 @@ if (numberOfTasks = 10) {
             <section>
 				<h3>Conditional Excercises</h3>
                 <ol>
+					<li>Use a <span class="operator">conditional operator</span> in the console to create a statement that evaluates to <span class="value">true</span></li>
+
+					<li>Use a <span class="operator">conditional operator</span> in the console to create a statement that evaluates to <span class="value">false</span></li>
                     <li>Create a variable called <span class="variable">numberOfCompleteTasks</span> with a value of <span class="value">5</span></li>
                     <li>Create a variable called <span class="variable">totalNumberOfTasks</span> with a value of <span class="value">10</span></li>
                     <li>Create a variable called <span class="variable">numberOfRemainingTask</span> and give it the value of <span class="variable">totalNumberOfTasks</span> minus <span class="variable">numberOfCompleteTasks</span></li>
@@ -170,13 +174,13 @@ if (numberOfTasks = 10) {
 
             <section>
                 <h3>The if/else statement</h3>
-                <p>Use else to provide an alternate set of instructions.</p>
+				<p>Use else to provide an alternate set of instructions if the condition is <span class="value">false</span>.</p>
                 <pre><code data-trim contenteditable class="javascript">
 var numberOfTasks = 5;
 if (numberOfTasks === 0) {
-  console.log('You finished all your tasks');
+  console.log('You finished all your tasks'); // Runs if the condition is true
 } else {
-  console.log('Back to work!');
+  console.log('Back to work!'); // Runs if the condition is false
 }
 				</code></pre>
             </section>
@@ -206,6 +210,7 @@ if (numberOfTasks === 0) {
 			</section>
             <section>
 				<h3>Logical Operators</h3>
+				<p>Use logical operators to combine multiple conditionals.</p>
                 <table>
                     <thead>
                       <tr>
@@ -216,6 +221,13 @@ if (numberOfTasks === 0) {
                     </thead>
                     <tbody>
                       <tr>
+                          <td>true <span class="operator">&amp;&amp;</span> false</td>
+                       <td>And</td>
+                       <td>
+                           <span class="value fragment">false</span>
+                       </td>
+                      </tr>
+                      <tr>
                           <td>5 <span class="operator">&amp;&amp;</span> 0</td>
                        <td>And</td>
                        <td>
@@ -223,8 +235,22 @@ if (numberOfTasks === 0) {
                        </td>
                       </tr>
                       <tr>
+                      <td>true <span class="operator">||</span> false</td>
+                       <td>Or</td>
+                       <td>
+                           <span class="value fragment">true</span>
+                       </td>
+                      </tr>
+                      <tr>
                       <td>5 <span class="operator">||</span> 0</td>
                        <td>Or</td>
+                       <td>
+                           <span class="value fragment">true</span>
+                       </td>
+                      </tr>
+                      <tr>
+                      <td><span class="operator">!</span> false</td>
+                       <td>Not</td>
                        <td>
                            <span class="value fragment">true</span>
                        </td>
@@ -243,12 +269,12 @@ if (numberOfTasks === 0) {
                 <h3>Using logical operators</h3>
                 <p>You can use these operators to combine conditions.</p>
                 <pre><code data-trim contenteditable>
-var taskIsComplete = false;
+var secondsRemaining = 10;
 var numberOfRemainingTasks = 5;
-if (taskIsComplete && numberOfRemainingTasks === 0) {
-    console.log('You just finished your last task!');
+if (secondsRemaining >= 0 && numberOfRemainingTasks === 0) {
+    console.log('You just finished your last task before you ran out of time!');
 } else {
-    console.log('You still have some tasks left');
+    console.log('Time ran out!');
 }
 				</code></pre>
             </section>
@@ -261,19 +287,25 @@ if (taskIsComplete && numberOfRemainingTasks === 0) {
                     <li>Enter an expression in the console that uses <span class="operator">&&</span> and evaluates to <span class="value">false</span></li>
                     <li>Enter an expression in the console that uses <span class="operator">||</span> and evaluates to <span class="value">false</span></li>
                     <li>Enter an expression in the console that uses <span class="operator">!</span> and evaluates to <span class="value">false</span></li>
+					<li>Write an if statement using the <span class="operator">&&</span> logical operator that alerts a message that says "Both conditions are true!"</li>
+					<li>Write an if statement using the <span class="operator">||</span> logical operator that alerts a message that says "One of the conditions is true!"</li>
+					<li>Write an if statement using the <span class="operator">!</span> logical operator that alerts a message that says "NOT!"</li>
                 </ol>
 			</section>
 
             <section>
                 <h3>For loops</h3>
-                <p>For loops allow you to execute a defined number of times.</p>
+                <p>For loops allow you to run code multiple times.</p>
                 <pre><code data-trim contenteditable>
 //will count 1 to 10
 for (var i = 1; i &lt;= 10; i++) {
     console.log(i); 
 }
 				</code></pre>
-                <p>For loops include 3 things: A starting value (i = 1), a conditional that determines whether the loop should run before each iteration (i < 10), and some code that should be run at the end of each iteration (i++).</p>
+				<p>For loops include 3 things:<br />
+				A starting value (var i = 1)<br />
+				A conditional that determines whether the loop should run before each iteration (i < 10)<br />
+				Code that should be run at the end of each iteration (i++).</p>
             </section>
             <section>
                 <h3>Loops and logic</h3>
@@ -362,7 +394,14 @@ tasks.push('Call your mum');
             </section>
             <section>
 				<h3>Arrays Exercise</h3>
-                <p>Create an array of tasks to complete. Echo a few values onto your screen.</p> 
+                <ul>
+					<li>Create a variable called <span class="variable">myTasks</span>. Give the a value of an array of task names to complete. Each task name should be a string.</li>
+					<li>Log the first task to the console using the bracket notation to access the first item.</li>
+					<li>Log the second task to the console using the bracket notation to access the second item.</li>
+					<li>Find out how many tasks are in the list using the length property of the variable your created.</li>
+					<li>Add a task to the list using push.</li>
+					<li>Change the first task.</li>
+				</ul>
 			</section>
 
             <section>
@@ -377,7 +416,11 @@ for (var i = 0; i &lt; tasks.length; i++) {
             </section>
             <section>
 				<h3>Arrays Exercise</h3>
-                <p>Use a loop to print the names of your tasks to the console.</p> 
+                <ul>
+					<li>Create a variable called <span class="variable">myTasks</span>. Give the a value of an array of task names to complete. Each task name should be a string.</li>
+					<li>Use a for loop and the length property of the array to loop over all of the tasks and print the name to the console.</li>
+					<li>Use the renderTask function you wrote last class in the for loop to render the task to your HTML.</li>
+				</ul>
 			</section>            
 
 			</div>
