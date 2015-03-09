@@ -450,6 +450,6 @@ C2 presentation slide show
 
 ## <span id="class19">Class 19: Data Analysis with Python</span>
 
-- [Intro to Data Manipulation with Python: Slides]({{ site.baseurl }}classes/data-manipulation-with-python/class1.html)
-- [Intro to Data Manipulation with Python: Tech Resources Data File]({{ site.baseurl }}classes/data-manipulation-with-python/VTTechResourceList.csv)
-- [Intro to Data Manipulation with Python: Final Script]({{ site.baseurl }}classes/data-manipulation-with-python/finalScriptAJM.py)
+- [Intro to Data Manipulation with Python: Slides]({{ site.baseurl }}/classes/data-manipulation-with-python/class1.html)
+- [Intro to Data Manipulation with Python: Tech Resources Data File]({{ site.baseurl }}/classes/data-manipulation-with-python/VTTechResourceList.csv)
+- [Intro to Data Manipulation with Python: Final Script]({{ site.baseurl }}/classes/data-manipulation-with-python/finalScriptAJM.py)
