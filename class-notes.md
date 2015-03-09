@@ -12,6 +12,7 @@ permalink: /class-notes/
 	<li><a href="#class15">Class 15</a></li>
 	<li><a href="#class16">Class 16</a></li>
 	<li><a href="#class17">Class 17</a></li>
+	<li><a href="#class19">Class 19</a></li>
 </ul>
 </nav>
 
@@ -446,3 +447,9 @@ C2 presentation slide show
 
 - [Intro to Programming with JavaScript: Class 2 - Conditionals, Loops and Arrays]({{ site.baseurl }}/classes/javascript/class2.html)
 - [Intro to Programming with JavaScript: Class 3 - Objects and the DOM]({{ site.baseurl }}/classes/javascript/class3.html)
+
+## <span id="class19">Class 19: Data Analysis with Python</span>
+
+- [Intro to Data Manipulation with Python: Slides]({{ site.baseurl }}classes/data-manipulation-with-python/class1.html)
+- [Intro to Data Manipulation with Python: Tech Resources Data File]({{ site.baseurl }}classes/data-manipulation-with-python/VTTechResourceList.csv)
+- [Intro to Data Manipulation with Python: Final Script]({{ site.baseurl }}classes/data-manipulation-with-python/finalScriptAJM.py)
