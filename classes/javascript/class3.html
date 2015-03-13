@@ -254,7 +254,7 @@ var task2 = createTask('Wash the Dog');
               <h3>Exercise: Create a Function to make task objects</h3>
 			  <ol>
 				  <li>Create a function called <span class="function">createTask</span> that accepts a single argument called <span class="argument">name</span></li>
-				  <li>Inside the function, create a variable called <span class="variable">task</span> and assign store a task object in it. Use the task object we created in the last exercise.</li>
+				  <li>Inside the function, create a variable called <span class="variable">task</span> and store a task object in it. You can use the code for the task object we created in the last exercise.</li>
 				  <li>Set the <span class="property">name</span> property of the task object we create to the <span class="argument">name</span> argument.</li>
 				  <li>Set the <span class="property">isComplete</span> property of the task object we create to false.</li>
 				  <li>On the last line of the function, return the <span class="variable">task</span> variable we created.</li>
@@ -313,7 +313,7 @@ renderTaskList(taskList);
 
             <section>
               <h3>The Document Object Model (DOM)</h3>
-              <p>The structure of an HTML page is represented by browsers and javascript using the DOM (Document Object Model). The DOM gives us a way to access and modify the HTML.</p>
+              <p>An HTML page is referred to by javascript as the document. Javascript uses an object called <code>document</code> to access and modify the HTML page. The DOM (Document Object Model) is the name for this approach of representing HTML pages as an object. The DOM gives us a way to access and modify the HTML.</p>
             </section>
             <section>
               <h3>The DOM: Sample Code</h3>
@@ -351,9 +351,9 @@ console.log(document.body.innerHTML); // The HTML inside the body tag
             <section>
 				<h3>DOM Exercises</h3>
 				<ol>
-					<li>Change the title of the page by setting the title property of the document object</li>
-					<li>Change the contents of the body tag by setting the innerHTML property of document.body</li>
-					<li>Use the console to find out what the irst html element inside the body tag is using body.children</li>
+					<li>Change the title of the page by setting the title property of the document object to a different string value</li>
+					<li>Change the contents of the body tag by setting the innerHTML property of document.body to a new string</li>
+					<li>Use the console to find out what the first html element inside the body tag is using body.children. Hint: body.children is an array. How do you access the first element of an array?</li>
 				</ol>
             </section>
           
@@ -380,7 +380,7 @@ var taskListElement = document.getElementById('task-list');
 				<ol>
 					<li>Add a div tag with an id of "task-list" to your html</li>
 					<li>Before the last line of the renderTask function, find the task list div by id and store it in a variable called <span class="variable">taskListElement</span></li>
-					<li>Update the last line of the renderTaskList function to add the task html to taskListElement instead of the body tag.</li>
+					<li>Update the last line of the renderTaskList function to add the task html to the innerHTML property of the <span class="variable">taskListElement</span> variable instead of the body tag.</li>
 				</ol>
             </section>
           
