@@ -14,6 +14,7 @@ permalink: /class-notes/
 	<li><a href="#class17">Class 17</a></li>
 	<li><a href="#class19">Class 19</a></li>
 	<li><a href="#class20">Class 20</a></li>
+	<li><a href="#class22">Class 22</a></li>
 </ul>
 </nav>
 
@@ -458,3 +459,7 @@ C2 presentation slide show
 
 - [Intro to Programming with JavaScript: Class 3 - Objects and the DOM]({{ site.baseurl }}/classes/javascript/class3.html)
 - [Introduction to jQuery](https://docs.google.com/presentation/d/1nJa9q77HM15F6HdGBP0nHlDjXIn2x49ehVGtVJvEzXE/edit?usp=sharing)
+
+## <span id="class22">Class 22: Launching a Website: Domains, Hosting & FTP</span>
+
+- [Web Hosting: Domains, DNS, Hosting & FTP]({{ site.baseurl }}/classes/web-hosting/index.html)
