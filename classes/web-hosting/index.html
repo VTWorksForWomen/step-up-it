@@ -155,581 +155,97 @@
 						<li class="fragment"><a href="http://arvixe.com">arvixe.com</a></li>
 					</ul>
                 </section>
+
 				<section>
-					<h2>Why do we write programs?</h2>
+					<h2>Connecting a Domain to a Hosting Account</h2>
+					<p>When you purchase a domain name from a registrar, you are generally also purchasing DNS hosting. This means that the registrar will host the information for the Domain Name System that helps resolve your domain name to the IP address of the server where it is hosted. By default, most registrars will set the DNS servers for a new domain to point to their DNS servers. This is fine if you purchase your domain and your web hosting from the same company. If you purchased your hosting from another company, they will tell you what their DNS servers are and you will need to update your domain at your registrar to point at those DNS servers.</p>
+				</section>
+
+				<section>
+					<h2>Setting DNS Servers for Your Domain</h2>
+					<p>If you purchased hosting from a different company than you purchased the domain from, you will need to log in to the registrar and set the DNS servers for your domain. The hosting company will generally email you a list of the DNS servers which will look something like.</p>
 					<ul>
-						<li class="fragment">To perform repetitive tasks more efficiently</li>
-						<li class="fragment">To perform complex tasks consistently and accurately</li>
-						<li class="fragment">To transform and manipulate data</li>
+						<li>dns1.namecheap.com</li>
+						<li>dns2.namecheap.com</li>
+						<li>dns3.namecheap.com</li>
+					</ul>
+					<p>Every registrar has a different web-based interface for changing DNS servers, so you may need to search their site for "Change DNS Servers" to find instructions.</p>
+				</section>
+
+				<section>
+					<h2>DNS Propagation</h2>
+					<p>The master DNS database which holds all of the information on which IP hosts each domain name is maintained by ICANN and it can sometimes take 24-48 hours for changes to your DNS servers to propagate. This is especially true if you have previously visited the domain name, in which case your Internet Service Provider may have saved a local copy of the information of what IP to find the domain at. For this reason when buying a new domain its a good idea NOT to visit the domain your browser until you have configured the DNS servers.</p>
+				</section>
+
+				<section>
+					<h2>Using a Proxy to View DNS Changes</h2>
+					<p>If you have already visited a domain and want to change the DNS and see if your changes have taken effect, you can use a proxy service. A proxy allows you to enter a URL and it will load the page for you through another location. This can get around issues where your ISP has cached the IP address of the domain because the proxy will not use your ISP since it is in another physical location.</p>
+					<p><a href="https://hide.me/en/proxy">https://hide.me/en/proxy</a></p>
+				</section>
+
+				<section>
+					<h2>Uploading Your Website to a Web Server<br />using File Transfer Protocol (FTP)</h2>
+					<p>FTP is a standard method for transfering files from one computer to another over the internet. FTP is commonly used to transfer website files from your computer to the web server you are renting to publish your website.</p>
+				</section>
+
+				<section>
+					<h2>FTP Accounts</h2>
+					<p>An FTP Account or FTP Credentials is the term of the login information to an FTP server. FTP credentials always include the following 3 pieces of information.</p>
+					<ul>
+						<li>Username</li>
+						<li>Password</li>
+						<li>Server Address: Address of the server (e.g. ftp.mydomain.com)</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Computers interpret instructions literally</h2>
-					<img src="img/computers-steve.png" />
-				</section>
-
-				<section>
-					<h2>Your Mom is a Clown<br />Your Dad is a Dinosaur</h2>
-					<p>Computers are like a person who only understands grammatically correct sentences. This can be frustrating.</p>
-					<blockquote class="fragment">
-						<p><strong>You:</strong> I took a picture of my mom and dad, a clown and a dinosaur.</p>
-						<p class="fragment"><strong>Computer:</strong> Your mom is a clown. Your dad is a dinosaur.</p>
-					</blockquote>
-				</section>
-
-                <section>
-                    <h2>Syntax: Rules for Talking to Computers</h2>
-                    <p>Every language has rules for how your instructions should be constructed so that a computer can understand them.</p>
-                    <p>When your instructions dont follow these rules, its a Syntax Error</p>
-                    <p>Can you think of some syntax rules for HTML or CSS?</p>
-                </section>
-                <section>
-                    <h2>HTML Syntax</h2>
-                    <p>A tag is an abbreviation surrounded by less than and greater than symbols.</p>
-                    <div class="fragment">
-                        <h3>Valid Syntax</h3>
-                        <pre><code data-trim contenteditable>&lt;p&gt;Hi!&lt;/p&gt;</code></pre>
-                    </div>
-                    <div class="fragment">
-                        <h3>Syntax Error</h3>
-                        <pre><code data-trim contenteditable>&lt;pHi!&lt;/p&gt;</code></pre>
-                    </div>
-                </section>
-                <section>
-                    <h2>CSS Syntax</h2>
-                    <p>A rule is a property followed by a colon followed by a value followed by a semi colon.</p>
-                    <div class="fragment">
-                        <h3>Valid Syntax</h3>
-                        <pre><code data-trim contenteditable>color: blue;</code></pre>
-                    </div>
-                    <div class="fragment">
-                        <h3>Syntax Error</h3>
-                        <pre><code data-trim contenteditable>color = blue;</code></pre>
-                    </div>
-                </section>
-
-                <section>
-                    <h2>Interpreted vs. Compiled</h2>
-                    <div style="float: left; width: 50%;">
-                        <h3>Interpreted</h3>
-                        <p>The computer can interpret and execute the code directly.</p>
-                        <p><strong>Examples:</strong> Javascript, PHP, Python, Perl and Ruby.</p> 
-                    </div>
-                    <div style="float: left; width: 50%;">
-                        <h3>Compiled</h3>
-                        <p>First, the code is compiled into an executable program. Second, this program can be executed by the computer.</p>
-                        <p><strong>Examples:</strong> C, C#, Java</p> 
-                    </div>
-                </section>
-                <section>
-                    <h2>Interpreted vs. Compiled Advantages</h2>
-                    <div style="float: left; width: 50%;">
-                        <h3>Interpreted</h3>
-                        <ul>
-                            <li>Faster to write code</li>
-                            <li>Cross-platform</li>
-                        </ul>
-                    </div>
-                    <div style="float: left; width: 50%;">
-                        <h3>Compiled</h3>
-                        <ul>
-                            <li>Faster to run code</li>
-                        </ul>
-                    </div>
-                </section>
-                <section>
-                    <h2>REPL</h2>
-                    <p>Interpreted languages generally include tools called REPLs that allow you to enter a line of code and immediately see the result.</p>
-                    <ol>
-                        <li class="fragment highlight-current-blue"><strong>R</strong>ead: Read a line of code</li>
-                        <li class="fragment highlight-current-blue"><strong>E</strong>valuate: Interpret the line of code</li>
-                        <li class="fragment highlight-current-blue"><strong>P</strong>rint: Show the result</li>
-                        <li class="fragment highlight-current-blue"><strong>L</strong>oop: Go back to step 1 and wait</li>
-                    </ol>
-                </section>
-                <section>
-                    <h2>Try out a Javascript REPL</h2>
-                    <p>Every browser has a built in Javascript interpreter. Chrome also has a built-in REPL called the console. Open it by going to <strong>Menu > Tools > Javascript Console</strong> or hitting <kbd>CTRL-SHIFT-J</kbd></p>
-                    <p>You can also expirement with REPLs for other languages at <a href="http://repl.it">repl.it</a></p>
-                </section>
-                <section>
-                    <h2>REPL/Console Excercises</h2>
-                    <ul>
-                        <li>Add 2 numbers together</li>
-                        <li>Type your name</li>
-                        <li>Type your name surrounded by quotes</li>
-                        <li>Type: alert('Hi!')</li>
-                        <li>Type: print('Hi!')</li>
-                        <li>Pick python or ruby on <a href="http://repl.it">repl.it</a> and try these excercises. Whats similar? Whats different?</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>What is Javascript used for?</h2>
-                    <ul>
-                        <li><strong>Front-end Web Development</strong>: Web browsers have a built in javascript interpreter. Javascript is the only language embedded in all browsers.</li>
-                        <li><strong>Back-end Web Programming</strong>: <a href="http://nodejs.org">nodejs</a> allows you to run javascript on the server, where you would traditionally use other languages like C#, Python, PHP, Java or Ruby.</li>
-                        <li><strong>???</strong>: With the introduction of nodejs in 2009, javascript became usable as a general purpose scripting language.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Using Javascript in the Browser</h2>
-                    <p>Lets use javascript inside an HTML page. Make a folder called javascript. Inside it make a new html page called index.html
-                    and add the following code:</p>
-                    <pre><code data-trim contenteditable>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Test Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
-&lt;script&gt;
-    alert('Hello World!');
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Script Tags</h2>
-                    <p>You can add JavaScript to an HTML document by placing it inside a script tag. The script tag tells the browser to treat the text inside it as JavaScript code that should be run.</p>
-                    <pre><code data-trim contenteditable>
-&lt;script&gt;
-alert('Hello World!');
-&lt;/script&gt;
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Javascript Files</h2>
-                    <p>Just like CSS, you can also place JavaScript in its own file and attach it to an HTML page.</p>
-                    <pre><code data-trim contenteditable>
-<script src="myfile.js"></script>
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Getting Results Onto Your Screen</h2>
-                    <h3>Popup Window</h3>
-                    <pre><code data-trim contenteditable>
-alert('Hello World!');
-                    </code></pre>
-                    <h3>Send it to the Console</h3>
-                    <pre><code data-trim contenteditable>
-console.log(5 + 2);
-                    </code></pre>
-                    <h3>Add to HTML</h3>
-                    <pre><code data-trim contenteditable>
-document.write('Hello!!!'); // Replaces all other HTML
-document.body.innerHTML = 'Hello!'; // Replace html inside &lt;body&gt;
-document.body.innerHTML += 'Hello!'; // Add html inside &lt;body&gt;
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Exercises</h2>
-                    <p>Open up index.html in your editor and try the follow exercises. Remember to put your JavaScript code inside the script tags.</p>
-                    <ol>
-                        <li>Use alert to show a popup message</li>
-                        <li>Use console.log to send data to the console. Open the console to view it.</li>
-                        <li>Use document.body.innerHTML to set the text inside the body tag.</li>
-                        <li>Copy your javascript from the script tag (dont include the script tag itself) and place it in a new file called script.js</li>
-                        <li>Delete the old script tag. Link your script.js file to the page using the script tag and src attribute.</li>
-                    </ol>
-                </section>
-
-				<section>
-					<h2>Comments</h2>
-					<p>Comments allow us to add descriptive text to our code and are ignored when the code is run.</p>
-					<pre><code data-trim contenteditable>
-// This is a single line comment
-
-/*
-This comment spans
-more than one line
-*/
-                    </code></pre>
-				</section>
-
-				<section>
-					<h2>Values</h2>
-					<p>A <span class="value">value</span> is a single piece of data in your code.</p>
+					<h2>FTP Client Software</h2>
+					<p>An FTP Client is a piece of software that allows you to connect to an FTP server using your credentials (username/password). There are many pieces of free FTP client software.</p>
 					<ul>
-						<li class="fragment">The name of a task: "<span class="value">Grocery Shopping</span>"</li>
-						<li class="fragment">Whether or not the task is completed: <span class="value">true</span> or <span class="value">false</span></li>
-						<li class="fragment">The date and time a task was completed: <span class="value">2015-02-27 12:30:00</span></li>
-						<li class="fragment">The order of the task in a list:  <span class="value">1</span> or <span class="value">2</span></li>
-						<li class="fragment">What other examples can you think of?</li>
+						<li><a href="https://cyberduck.io">Cyberduck</a></li>
+						<li><a href="https://filezilla-project.org/">FileZilla</a></li>
+						<li><a href="http://fireftp.net/">FireFTP</a></li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Expressions</h2>
-                    <p>An expression is a piece of code that can be evaluated to a <span class="value">value</span>. Each line in following example is an expression.</p>
-					<pre><code data-trim contenteditable>var taskName = "Grocery shopping";
-5;
-"bob" + " " + "hoskins"
-4 * 2</code></pre>
-					<p>Anything you type into the REPL/console which does not result in an error is a valid expression.</p>
-				</section>
-
-
-				<section>
-					<h2>Types of Values (Data Types)</h2>
-					<p>Programming languages categorize <span class="value">values</span> into <span class="type">types</span> based on the kind of information being represented.</p>
+					<h2>Uploading Files via FTP<br />The Web Root</h2>
+					<p>The <strong>Web Root</strong> is the name of a folder on your web hosting server where files should be stored in order for them to be web accessible. Any files in this folder will be available via http://www.mydomain.com/filename.html. When you connect to your hosting account using FTP, you will see a list of files and folders. One of these folders is generally the webroot. The webroot folder is usually named one of the following things:</p>
 					<ul>
-						<li class="fragment"><span class="type">String</span>: "<span class="value">Grocery Shopping</span>"</li>
-						<li class="fragment"><span class="type">Boolean</span>: <span class="value">true</span> or <span class="value">false</span></li>
-						<li class="fragment"><span class="type">Date</span>: <span class="value">2015-02-27 12:30:00</span></li>
-						<li class="fragment"><span class="type">Integer</span>:  <span class="value">1</span> or <span class="value">2</span></li>
-						<li class="fragment">What other examples can you think of?</li>
-						<li class="fragment"><span class="type">Float</span>:  <span class="value">3.14159</span> or <span class="value">9.99</span></li>
+						<li>public_html</li>
+						<li>www</li>
+						<li>www.mydomain.com</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Strings</h2>
-					<p>A string is what programming languages call text. In javascript we surround strings with single or double quotes. There is no difference between single and double quotes.</p>
-					<p>What can we learn about strings from the examples below?</p>
-					<pre><code data-trim contenteditable>'Grocery Shopping'
-'Reread "To Kill a Mockinbird"'
-"Give the dog a bath"
-"Pick up dad's gift"
-'That\'s it, I\'ve had enough!'
-"\"I am quite tired\", she said"
-</code></pre>
+					<h2>The Home Page: index.html</h2>
+					<p>Most popular pieces of web server software will automatically shows the file named index.html when the user requests a folder. When the user visit http://www.mydomain.com most web servers will look for a file named index.html in the web root folder.</p>
 				</section>
 
 				<section>
-					<h2>Numbers (Integers and Floats)</h2>
-					<p>An integer is a whole number (no decimal places). A float is a number with decimal places. Both are written without quotes in javascript.</p>
-					<pre><code data-trim contenteditable>10
-5
-3.14159
-9.99
--50
-</code></pre>
+					<h2>Running a Web Server Locally</h2>
+					<p>It is often convenient to run a web server locally on your computer so you can test your website. This is not required if your website is composed of simple html files, but if you use a server side language like PHP you will need a web server to interpret your PHP files into HTML. Depending on your operating system there are a number of free options for installing the popular web server Apache on your local computer.</p>
 				</section>
 
 				<section>
-					<h2>Booleans</h2>
-					<p>A boolean is a yes/no value. It is written as either true or false, without any quotes.</p>
-					<pre><code data-trim contenteditable>
-true
-false
-                    </code></pre>
-                    <p>Booleans are useful for executing code only if certain conditions are met.</p>
-					<pre><code data-trim contenteditable>
-var taskIsComplete = false;
-if (taskIsComplete) {
-    alert('We are done here!'); // This code does not run
-}
-                    </code></pre>
+					<h2>Running the Apache Web Server<br />On Your Computer</h2>
+					<ul>
+						<li>Windows: <a href="https://www.apachefriends.org/index.html">XAMPP</a></li>
+						<li>Mac OS X: <a href="http://www.mamp.info/en/">MAMP</a></li>
+						<li>Linux: <a href="http://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP</a></li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>Variables</h2>
-					<p><span class="variable">Variables</span> are named containers that can hold <span class="value">values</span>.</p>
-					<img src="img/spice-tins.jpg" />
+					<h2>Exercises</h2>
+					<ul>
+						<li>Register a domain and purchase hosting from <a href="http://namecheap.com">namecheap.com</a></li>
+						<li>Upload files to your domain using FTP</li>
+						<li>Visit your domain using your browser to view the files you uploaded</li>
+						<li>Bonus: Install the apache web server, MySQL database and PHP on your local machine</li>
+					</ul>
 				</section>
-
-				<section>
-					<h2>Creating Variables</h2>
-					<p>You create a <span class="variable">variable</span> by using the var keyword.<br />You decide on the name.</p>
-					<pre><code data-trim contenteditable>
-var taskName = "Grocery Shopping";
-var taskIsComplete = false;
-var taskPriority = 1;
-                    </code></pre>
-				</section>
-
-				<section>
-					<h2>Naming Variables</h2>
-                    <ul>
-                        <li>Variable names are case-sensitive.</li>
-                        <li>Variable names should be unique</li>
-                        <li>Variable names should only contain letters, numbers and certain special characters ($, _). </li>
-                        <li>Some names are not allowed because they are reserved by the language like <strong>var</strong> and <strong>if</strong></li>
-                        <li>Naming your variables clearly is crucial to writing code that is easy to understand.</p>
-                    </ul>
-				</section>
-
-				<section>
-					<h2>Changing Variable Values</h2>
-					<p>You can change a variable's value after creating it by assigning a value using the equals sign. The code below creates a variable called <span class="variable">taskName</span> with the value <span class="value">"Grocery Shopping"</span> and then changes the value to <span class="value">"Dog grooming"</span>.</p>
-					<pre><code data-trim contenteditable>
-var taskName = "Grocery Shopping";
-console.log(taskName); // "Grocery shopping"
-taskName = "Dog grooming";
-console.log(taskName); // "Dog grooming"
-                    </code></pre>
-				</section>
-
-				<section>
-					<h2>Referencing Variables in Code</h2>
-                    <p>Once you have created a <span class="variable">variable</span> you can refer to its <span class="value">value</span> in your code by using the variable name.</p>
-					<pre><code data-trim contenteditable class="javascript">
-var age = 21;
-var ageInMonths = age * 12;
-console.log(ageInMonths); // Prints the result of 21 times 12
-</code></pre>
-				</section>
-
-				<section>
-					<h2>Variable Exercises</h2>
-                    <p>Create some variables, use console.log to check the values</p>
-					<ol>
-                        <li>Create a variable called <span class="variable">taskName</span> with the value of the name of a task (a <span class="type">string</span> like <span class="value">"Write some code"</span>)</li>
-                        <li>Create a variable called <span class="variable">incompleteTasks</span> with a value of <span class="value">4</span></li>
-                        <li>Create a variable called <span class="variable">completeTasks</span> with a value of <span class="value">3</span></li>
-                        <li>Create a variable called <span class="variable">totalTasks</span> with a value of <span class="variable">incompleteTasks</span> + <span class="variable">completeTasks</span></li>
-						<li>Create a variable with a name of your choice and do not assign it a value. What value is it given? (hint: use console.log to find out)</li>
-						<li>Create a variable with the name if and assign it any value. What happened?</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Operators</h2>
-                    <p><span class="operator">Operators</span> are special symbols that we can use to compare, modify or combine <span class="value">values</span>. </p>
-				</section>
-
-				<section>
-					<h2>Arithmetic Operators</h2>
-					<table>
-						<thead>
-							<tr>
-								<th></th>
-								<th>Description</th>
-								<th>Example</th>
-								<th>Result</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><span class="operator">+</span></td>
-								<td>Adds 2 values</td>
-								<td>5 <span class="operator">+</span> 5</td>
-								<td>10</td>
-							</tr>
-
-							<tr>
-								<td><span class="operator">-</span></td>
-								<td>Subtracts one value from another</td>
-								<td>
-									5 <span class="operator">-</span> 3
-								</td>
-								<td>2</td>
-							</tr>
-
-							<tr>
-								<td><span class="operator">*</span></td>
-								<td>Multiply one value by another</td>
-								<td>
-									4 <span class="operator">*</span> 2
-								</td>
-								<td>8</td>
-							</tr>
-
-							<tr>
-								<td><span class="operator">/</span></td>
-								<td>Divide one value by another</td>
-								<td>
-									16 <span class="operator">/</span> 4
-								</td>
-								<td>4</td>
-							</tr>
-							<tr>
-								<td><span class="operator">%</span></td>
-								<td>Divide one value by another</td>
-								<td>
-									5 <span class="operator">%</span> 4
-								</td>
-								<td>1</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Number Exercises</h2>
-					<ol>
-                        <li>Add 2 numbers, store the result in a variable called <span class="variable">sum</span></li>
-						<li>Multiply 2 numbers together</li>
-						<li>Subtract 1 number from another</li>
-						<li>Divide one number by another</li>
-						<li>Multiply .5 by 2. What did we learn?</li>
-						<li>Divide 5 by 3. What did you learn?</li>
-						<li>Find out the remainder of dividing one number by another</li>
-						<li>Divide a positive number by 0</li>
-						<li>Divide 0 number by 0</li>
-						<li>Cause an error by entering invalid code, what error did you see and why?</li>
-					</ol>
-				</section>
-				<section>
-					<h2>String Operators: +</h2>
-                    <p>The <span class="operator">+</span> operator behaves differently when used with <span class="type">string</span> values than with numbers. It will combine them together into a new string.</p>
-					<pre><code data-trim contenteditable class="javascript">
-var kittensFirstName = 'Bing';
-var kittensLastName = 'Crosby';
-var kittensFullName = kittensFirstName + ' ' + kittensLastName;
-console.log(kittensFullName); // 'Bing Crosby'
-</code></pre>
-				</section>
-
-				<section>
-					<h2>String Operators: +=</h2>
-					<p>The <span class="operator">+=</span> operator lets you add some text to an existing string.</p>
-					<pre><code data-trim contenteditable class="javascript">
-var kittensName = 'Fluffy';
-kittensName += ' McDougle';
-console.log(kittensName); // 'Fluffy McDougle'
-</code></pre>
-				</section>
-
-
-				<section>
-					<h2>String Exercises</h2>
-					<ol>
-                        <li>Combine 2 <span class="type">strings</span> together use the <span class="operator">+</span> operator</li>
-                        <li>Combine 2 <span class="type">strings</span> together with a space in the middle</li>
-                        <li>Combine a <span class="type">string</span> and a <span class="type">number</span>. What did you learn?</li>
-                        <li>Combine a <span class="type">number</span> (e.g. <span class="value">5</span>) and a <span class="type">number</span> <span class="type">string</span> (e.g. <span class="value">"5"</span>). What did you learn?</li>
-                        <li>Combine a <span class="type">number</span> in quotes and a <span class="type">number</span> not in quotes. what did you learn?</li>
-                        <li>Try using one of the operators than <span class="operator">+</span> with 2 <span class="type">strings</span>, what happens?</li>
-                        <li>Create a <span class="type">string</span> that includes single quotes</li>
-                        <li>Create a <span class="type">string</span> that includes double quotes</li>
-                        <li>Divide a <span class="type">number</span> in quotes by a <span class="type">number</span> not in quotes, what did we learn? Try other operators (*, %)</li>
-						<li>Cause an error, what error did you see and why?</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Functions</h2>
-                    <p><span class="function">Functions</span> are reusable pieces of code. Once we define a function we can use it over and over.</p>
-                    <p>Functions often take some input values and return some output value.</p>
-                    <p>For example an <span class="function">add</span> function would take 2 numbers as input and return the sum as output.</p>
-					<pre><code data-trim contenteditable class="javascript">
-var add = function(number1, number2) {
-    return number1 + number2;
-}
-                    </code></pre>
-				</section>
-
-				<section>
-					<h2>Calling Functions</h2>
-                    <p>To run the code inside a function, <strong>call</strong> the function using the function name followed by parentheses.</p>
-                    <p>If the function takes any input values, they are placed inside the parentheses and separated by commas.</p>
-                    <p>If the function returns any output value, you can store the value in a variable.</p>
-					<pre><code data-trim contenteditable class="javascript">
-var add = function(number1, number2) {
-    return number1 + number2;
-}
-var result = add(5, 10);
-console.log(result); // 15
-                    </code></pre>
-				</section>
-
-				<section>
-					<h2>Anatomy of a Function: Arguments</h2>
-                    <p>A function can take input values, which are called <span class="argument">arguments</span>.</p>
-                    <p>The <span class="function">add</span> function we defined takes 2 arguments:<br />
-                    <span class="argument">number1</span> and <span class="argument">number2</span>.</p>
-					<pre><code data-trim contenteditable class="javascript">
-var add = function(number1, number2) {
-    return number1 + number2; // 5 + 10
-}
-
-add(5, 10);
-                    </code></pre>
-                </section>
-
-				<section>
-					<h2>Anatomy of a Function: Return Values</h2>
-                    <p>A function can return output using the <strong>return</strong> keyword.</p>
-                    <p>The code that calls the function can store the return value in a variable or use it directly.</p>
-					<pre><code data-trim contenteditable class="javascript">
-var add = function(number1, number2) {
-    return number1 + number2;
-}
-
-var sum = add(5, 10);
-console.log(sum);
-console.log(add(2, 3));
-                    </code></pre>
-                </section>
-
-				<section>
-					<h2>You've Already Used Functions</h2>
-                    <p>What functions can you think of which we've already used?<br />
-                    <strong>hint:</strong> function calls look like functionName()</p>
-                    <p>What arguments does each function take?<br />
-                    What return value does each function produce if any?</p>
-                    <ul class="fragment">
-                        <li>alert('my message')</li>
-                        <li class="fragment">prompt('how old are you?')</li>
-                        <li class="fragment">console.log(5 + 10)</li>
-                    </ul>
-                </section>
-
-				<section>
-					<h2>Exercise: fullName function</h2>
-                    <p>Create a <span class="function">fullName</span> function to combine a first and last name.</p>
-                    <ol>
-                        <li>Create a function called <span class="function">fullName</span>.</li>
-                        <li><span class="function">fullName</span> should take 2 arguments: <span class="argument">firstName</span> and <span class="argument">lastName</span>.</li>
-                        <li><span class="function">fullName</span> should combine <span class="argument">firstName</span> and <span class="argument">lastName</span> together with
-                        a space in between and return the result.</li>
-                        <li>Outside the function, define a variable called <span class="variable">myFirstName</span> with a value of your first name.</li>
-                        <li>Define a variable called <span class="variable">myLastName</span> with a value of your last name.</li>
-                        <li>Call the function with <span class="variable">myFirstName</span> and <span class="variable">myLastName</span> as arguments and store the result in a variable called <span class="variable">myFullName</span></li>
-                        <li>Call console.log, passing in the <span class="variable">myFullName</span> variable to see the result.</li>
-                    </ol>
-                </section>
-
-				<section>
-					<h2>Exercise: renderTask function</h2>
-                    <p>Create a <span class="function">renderTask</span> function to show a task name inside the &lt;body&gt; wrapped in &lt;li&gt; tags.</p>
-                    <ol>
-                        <li>Create a function called <span class="function">renderTask</span>.</li>
-                        <li><span class="function">renderTask</span> should take 1 argument: <span class="argument">taskName</span></li>
-                        <li><span class="function">renderTask</span> should create a <span class="type">string</span> that wraps &lt;li&gt; tags around <span class="argument">taskName</span> 
-                        and store the result in a variable called <span class="variable">taskHtml</span></li>
-                        <li>Use the <span class="operator">+=</span> operator to add <span class="variable">taskHtml</span> to document.body.innerHTML</li>
-                        <li>Call the function <span class="function">renderTask</span> multiple times, each time passing in a task name as the argument.</li>
-                        <li>You should see the tasks appear in your html</li>
-                    </ol>
-                </section>
-
-				<section>
-					<h2>Solution: renderTask function</h2>
-                    <pre><code data-trim contenteditable class="javascript">
-var renderTask = function(taskName) {
-    var taskHtml = '<li>' + taskName + '</li>';
-    document.body.innerHTML += taskHtml;
-}
-
-renderTask('Grocery shopping');
-renderTask('Walk the dog');
-                    </code></pre>
-                </section>
-
-				<section>
-					<h2>Exercise: Calculator Functions</h2>
-                    <p>Create a set of functions which a calculator program could use to do basic math.</p>
-                    <ol>
-                        <li>add</li>
-                        <li>subtract</li>
-                        <li>multiply</li>
-                        <li>divide</li>
-                        <li>remainder</li>
-                        <li>power</li>
-                    </ol>
-                </section>
-
 
 			</div>
 
