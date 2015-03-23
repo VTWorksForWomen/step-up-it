@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Step Up to IT - WordPress</title>
+
+		<meta name="description" content="An introduction to understanding and using WordPress">
+		<meta name="author" content="Payton Swick">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/wordpress-presentation.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h1 class="title">Welcome!</h1>
+						<h3>Understanding and Using WordPress</h3>
+						<img class="logo logo--wordpress" data-src="lib/media/wordpress-logo-stacked-rgb.png" alt="WordPress">
+						<p>
+						<small><a href="mailto:payton+suit@foolord.com">Payton Swick</a> &raquo; <a href="http://twitter.com/sirbrillig">@sirbrillig</a></small>
+						</p>
+					</section>
+
+					<section>
+						<h2 class="title">Who am I?</h2>
+						<p>Payton</p>
+						<p><small>Code Wrangler</small></p>
+						<p>
+						<img width="30%" class="logo logo--automattic" data-src="lib/media/Automattic_logo.png" alt="Automattic">
+						</p>
+						<div class="fragment">
+							<a href="http://someteawith.me">
+								<img class="logo logo--someteawithme" data-src="lib/media/someteawithme-logo.png" alt="Some Tea With Me">
+							</a>
+							</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">What is a CMS?</h2>
+						<p class="fragment roll-in"><span class="acronym">C</span>ontent <span class="acronym">M</span>anagement <span class="acronym">S</span>ystem</p>
+						<p class="fragment roll-in">A tool to allow publishing, editing, and organizing content for a Website.</p>
+						<p class="fragment roll-in"><span class="fragment compare1">Cloud</span> vs. <span class="fragment compare2">Installed</span></p>
+						<p class="fragment roll-in">Convenience vs. Ownership</p>
+					</section>
+
+					<section>
+						<h2 class="title">Website? Blog? What's the difference?</h2>
+						<p class="fragment roll-in">Not much.</p>
+						<p class="fragment roll-in">Both are published content.</p>
+					</section>
+
+					<section>
+						<h2 class="title">What is WordPress?</h2>
+						<blockquote class="fragment roll-in">&ldquo;WordPress is web software you can use to create a beautiful website or blog. We like to say that WordPress is both free and priceless at the same time.&rdquo; -<a href="https://wordpress.org/">WordPress.org</a></blockquote>
+						<p class="fragment">Open-source; Large community; Powers 20% of the web.</p>
+					</section>
+
+					<section>
+						<h2 class="title">WordPress.com vs. WordPress.org</h2>
+						<p><span class="compare1">WordPress.com</span> is fully hosted.</p><p class="fragment" data-fragment-index="1"> Security, backups, plugins, and updates are all provided.</p>
+						<p><span class="compare2">WordPress.org</span> is self hosted.</p><p class="fragment" data-fragment-index="1"> Custom themes, any plugin, full control.</p>
+						<p class="fragment" data-fragment-index="1"><small><a href="https://en.support.wordpress.com/com-vs-org/">(more info)</a></small></p>
+					</section>
+				</section>
+
+				<section>
+					<h2 class="title">Installing WordPress</h2>
+					<ol>
+						<li>Find a Host*</li>
+						<li>Download and Uncompress*</li>
+						<li>Create a database*</li>
+						<li>Upload WordPress*</li>
+						<li>Visit the Site</li>
+					</ol>
+					<p class="fragment" data-fragment-index="1">*Sometimes the Host does the first four steps for you.</p>
+					<p class="fragment" data-fragment-index="1"><small><a href="http://codex.wordpress.org/Installing_WordPress">(more info)</a></small></p>
+				</section>
+
+				<section>
+					<h2 class="title">Installing WordPress</h2>
+					<p>Once you visit the site for the first time, WordPress will guide you through its setup.</p>
+					<img data-src="lib/media/wordpress-install.png" alt="wordpress install page">
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">wp-admin</h2>
+						<p>The back-end for WordPress.</p>
+						<img data-src="lib/media/local-wp-admin.png" alt="wp-admin">
+					</section>
+
+					<section>
+						<h2 class="title">wp-admin Menus</h2>
+						<p>Where you will find everything you need. Let's skim over it.</p>
+						<img data-src="lib/media/wp-admin-menus.png" alt="wp-admin menus">
+					</section>
+
+					<section>
+						<h2 class="title">wp-admin Appearance</h2>
+						<p>All the visual setup of your site is in here.</p>
+						<img data-src="lib/media/wp-admin-appearance.png" alt="wp-admin appearance">
+					</section>
+
+					<section>
+						<h2 class="title">The Customizer</h2>
+						<p>A different interface for visual aspects of your site. A relatively recent addition to WordPress, it gives a live preview of any setting that you change.</p>
+						<img data-src="lib/media/customizer.png" alt="wp-admin Customizer">
+					</section>
+
+					<section>
+						<h2 class="title">wp-admin Users</h2>
+						<p>You can give others access to your site, and give each user a different role.</p>
+						<img data-src="lib/media/wp-admin-users.png" alt="wp-admin users">
+						<img data-src="lib/media/wp-admin-user-roles.png" alt="wp-admin user roles">
+						<p class="fragment">Different roles give different privileges on the site.</p>
+					</section>
+
+					<section>
+						<h2 class="title">Change your user settings</h2>
+						<p>If you didn't change it already, <span class="highlight">never</span> leave the admin password as the default.</p>
+						<img data-src="lib/media/admin-profile.png" alt="wp-admin admin profile">
+					</section>
+
+					<section>
+						<h2 class="title">Comment settings</h2>
+						<p>Comments are enabled for everything by default.</p>
+						<img data-src="lib/media/wp-admin-discussion.png" alt="wp-admin discussion settings">
+					</section>
+
+					<section>
+						<h2 class="title">Front page setting</h2>
+						<p>This controls what you see on the "home" page, which is the first page that appears when visiting a site.</p>
+						<p>Often the difference between a blog and a website comes down to the front page setting. Do you want it to have a list of posts, or a single page?</p>
+						<img data-src="lib/media/front-page-settings.png" alt="wp-admin front page settings">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">Making a New Post</h2>
+						<img data-src="lib/media/local-wp-admin-new-post.png" alt="new post page">
+					</section>
+
+					<section>
+						<h2 class="title">Making a New Post</h2>
+						<img data-src="lib/media/view-post.png" alt="view post link">
+					</section>
+
+					<section data-background="#b5533c" data-background-transition="zoom">
+						<img data-src="lib/media/local-wp-first-post.png" alt="your first post published">
+					</section>
+
+					<section>
+						<h2 class="title">Managing Posts</h2>
+						<img data-src="lib/media/local-wp-admin-posts.png" alt="posts page">
+					</section>
+
+					<section>
+						<h2 class="title">Posts vs. Pages</h2>
+						<p class="fragment" data-fragment-index="1"><span class="compare1">Posts</span> are ordered content listed in reverse chronological order.</p>
+						<p class="fragment" data-fragment-index="2"><span class="compare2">Pages</span> are static and not listed by date.</p>
+						<p class="fragment" data-fragment-index="2"><small><a href="https://en.support.wordpress.com/post-vs-page/">(more info)</a></small></p>
+					</section>
+
+					<section>
+						<h2 class="title">Making a New Page</h2>
+						<img data-src="lib/media/new-page.png" alt="new page">
+					</section>
+
+					<section data-background="#b5533c" data-background-transition="zoom">
+						<img data-src="lib/media/new-page-published.png" alt="your first page published">
+					</section>
+
+					<section>
+						<p>You get a menu item for free with each new Page, although you can edit them manually too.</p>
+						<img data-src="lib/media/new-page-published-menu.png" alt="you get a menu for free">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">The Editor</h2>
+						<p>Editing Posts and Pages is mostly the same. The editor allows formatting text and media.</p>
+						<img data-src="lib/media/editor.png" alt="the wp-admin editor">
+					</section>
+
+					<section>
+						<h2 class="title">The Editor</h2>
+						<p>You can add images by using the media library.</p>
+						<img data-src="lib/media/add-media.png" alt="add media button">
+					</section>
+
+					<section>
+						<h2 class="title">The Media Gallery</h2>
+						<img data-src="lib/media/media-gallery.png" alt="media gallery">
+					</section>
+
+					<section>
+						<h2 class="title">The Media Gallery</h2>
+						<p>You can upload images just by dragging and dropping.</p>
+						<img data-src="lib/media/drag-to-upload.png" alt="drag to upload in the media gallery">
+					</section>
+
+					<section>
+						<h2 class="title">The Media Gallery</h2>
+						<p>Once the image has been uploaded, you can insert it into the post by clicking "Insert Into Post"</p>
+						<img data-src="lib/media/insert-into-post.png" alt="insert into post">
+					</section>
+
+					<section>
+						<h2 class="title">The Editor</h2>
+						<p>Images are inserted wherever your cursor was placed, but you can drag them around to where you want them.</p>
+						<img data-src="lib/media/inserted-image.png" alt="image on page">
+						<p>Use the "Preview" button to see what the post will look like as you adjust the placement of images and text.</p>
+					</section>
+
+					<section>
+						<h2 class="title">The Editor</h2>
+						<p>The editor has two modes. Visual, which is the default...</p>
+						<img data-src="lib/media/editor-visual-mode.png" alt="visual editor">
+					</section>
+
+					<section>
+						<h2 class="title">The Editor</h2>
+						<p>...and Text, which is raw HTML.</p>
+						<img data-src="lib/media/editor-text-mode.png" alt="text editor">
+					</section>
+
+					<section>
+						<h2 class="title">Embedding Media</h2>
+						<p>You can also embed lots of media directly into the editor by just pasting the link. (Youtube, Twitter, Hulu, Instagram, Kickstarter, etc.)</p>
+						<img data-src="lib/media/oembeds.png" alt="Embedding links in the editor">
+					</section>
+
+					<section>
+						<h2 class="title">Embedding Media</h2>
+						<img data-src="lib/media/oembed-changed.png" alt="Embedding links in the editor">
+					</section>
+
+					<section>
+						<h2 class="title">Publishing Options</h2>
+						<p>You can save a post as a Draft, which will leave the post in the list for later.</p>
+						<img data-src="lib/media/publish-box.png" alt="the publish box">
+						<p>Posts can even be scheduled to be published at a specific time in the future.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">Categories and Tags</h2>
+						<p>All posts can be tagged and be added to a category. These are called "Taxonomies" and assist with organizing the content on your site.</p>
+						<p class="fragment"><span class="compare1">Categories</span> are typically for broad types of content. Too many makes using them difficult.</p>
+						<p class="fragment" ><span class="compare2">Tags</span> are easier to add as many as you like, and are usually more specific.</p>
+					</section>
+
+					<section>
+						<h2 class="title">Categories and Tags</h2>
+						<img data-src="lib/media/tags-and-categories.png" alt="tags and categories">
+					</section>
+
+					<section>
+						<h2 class="title">Categories and Tags</h2>
+						<p>If you're familiar with <span class="highlight">#hashtags</span>, that's pretty much how <span class="compare2">Tags</span> work.</p>
+					</section>
+
+					<section>
+						<h2 class="title">Categories and Tags</h2>
+						<p>One advantage of using Categories and Tags is that each one has a special page listing all the associated posts.</p>
+						<img data-src="lib/media/category-page.png" alt="category page">
+					</section>
+				</section>
+
+				<section>
+					<h2 class="title">Plugins and Themes</h2>
+					<p>Both are ways to add functionality to a WordPress site.</p>
+					<p class="fragment"><span class="compare1">Plugins</span> usually just have one specific function that adds to any site. There can be many active at once.</p>
+					<p class="fragment" ><span class="compare2">Themes</span> usually have more to do with appearance but can completely change the way that a site works. Only one may be active at a time.</p>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">Themes</h2>
+						<p>Can be a simple combination of layout and styles.</p>
+						<p class="fragment" data-fragment-index="2">Or they can change the entire basis of the site to serve a specific purpose.</p>
+						<p class="fragment" data-fragment-index="2">e.g.: photo blogging, selling t-shirts, running a newspaper.</p>
+					</section>
+
+					<section data-background="#4d7e65" data-background-transition="zoom">
+						<img data-src="lib/media/theme4.png" alt="a simple theme">
+					</section>
+
+					<section data-background="#4d7e65" data-background-transition="zoom">
+						<img data-src="lib/media/theme5.png" alt="another simple theme">
+					</section>
+
+					<section data-background="#4d7e65" data-background-transition="zoom">
+						<img data-src="lib/media/theme3.png" alt="a photo theme">
+					</section>
+
+					<section data-background="#4d7e65" data-background-transition="zoom">
+						<img data-src="lib/media/theme1.png" alt="a wide simple theme">
+					</section>
+
+					<section>
+						<h2 class="title">Themes</h2>
+						<p>Can also be custom-tailored for your specific site, like many professional business themes.</p>
+					</section>
+
+					<section data-background="#4d7e65" data-background-transition="zoom">
+						<img data-src="lib/media/timedotcom.png" alt="time.com">
+					</section>
+
+					<section data-background="#4d7e65" data-background-transition="zoom">
+						<img data-src="lib/media/techcrunch.png" alt="techcrunch.com">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">Using a Plugin</h2>
+						<p>They can be installed from the official plugin site or by uploading them yourself.</p>
+						<p class="fragment">Just like Apps, there are a lot of plugins out there that are unnecessary, and occasionally even malicious.</p>
+						<p class="fragment">In general, ignore plugins that make unlikely claims or that have no stars or reviews.</p>
+						<p class="fragment">Using plugins from the official site is a good idea to protect yourself.</p>
+					</section>
+
+					<section>
+						<h2 class="title">Using a Plugin</h2>
+						<img data-src="lib/media/contact-form-7.png" alt="Contact Form 7">
+					</section>
+
+					<section>
+						<h2 class="title">Using a Plugin</h2>
+						<p>Plugins may add menu items for their specific function. This one adds a menu for various contact forms.</p>
+						<img data-src="lib/media/plugin-added-menu.png" alt="An added menu">
+					</section>
+
+					<section>
+						<h2 class="title">Using a Plugin</h2>
+						<p>Let's add a contact form to a Page</p>
+					</section>
+
+					<section>
+						<h2 class="title">Using a Plugin</h2>
+						<p>Let's add a Security plugin. This one is called WordFence and can protect from a lot of different attacks.</p>
+						<img data-src="lib/media/wordfence.png" alt="WordFence">
+					</section>
+
+					<section>
+						<h2 class="title">Using a Plugin</h2>
+						<p>Jetpack is a plugin which adds a lot of the WordPress.com special features to an installed site.</p>
+						<img data-src="lib/media/jetpack.png" alt="Jetpack">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">A Custom Theme</h2>
+						<p>Themes can be complex, but a lot is taken care of by using a base theme, like <span class="highlight">Underscores</span>.</p>
+						<p class="fragment"><a href="http://underscores.me">http://underscores.me</a></p>
+						<img data-src="lib/media/underscores.png" alt="Underscores">
+					</section>
+
+					<section>
+						<h2 class="title">A Custom Theme</h2>
+						<p>Name your theme, download it, uncompress it, and upload it to your WordPress install</p>
+						<img data-src="lib/media/add-a-theme.png" alt="add a theme">
+					</section>
+
+					<section>
+						<h2 class="title">Un-customized Underscores</h2>
+						<img data-src="lib/media/undescores-basic.png" alt="an un-customized Underscores theme">
+					</section>
+
+					<section>
+						<h2 class="title">Editing the Stylesheet</h2>
+						<img data-src="lib/media/editing-style-sheet.png" alt="editing the stylesheet">
+					</section>
+
+					<section>
+						<h2 class="title">Editing the Stylesheet</h2>
+						<p>Try to make the theme look a little nicer using just the stylesheet. It's not easy!</p>
+					</section>
+
+					<section>
+						<h2 class="title">Other parts of the Theme</h2>
+						<p>Themes are also made up of many PHP files.</p>
+						<p>PHP allows inserting code directly into HTML, so you can program how a webpage should behave. This is where most of the power of WordPress themes comes from.</p>
+					</section>
+
+					<section>
+						<h2 class="title">Other parts of the Theme</h2>
+						<p>Try editing the <span class="highlight">header.php</span> file to see what you can change.</p>
+						<img data-src="lib/media/header-file.png" alt="editing the header file">
+					</section>
+
+					<section>
+						<h2 class="title">Other parts of the Theme</h2>
+						<p>The Web is more and more using Javascript. WordPress, as it has evolved, has included more and more Javascript.</p>
+					</section>
+				</section>
+
+				<section>
+					<h2 class="title">Good Work!</h2>
+					<p>WordPress's mission is "to democratize publishing", meaning that it gives you the control and power needed to put any sort of content out there on the Web that you can think of, without having to pay someone specific or do things in a specific way.</p>
+					<p>It can be used to make pretty much anything, so use your imagination!</p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
