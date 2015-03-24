@@ -1,0 +1,29 @@
+.reveal section img.logo {
+	border: none;
+	box-shadow: none;
+}
+
+.reveal h1.title, .reveal h2.title, .reveal h3.title {
+	color: #d54e21;
+}
+
+.reveal span.acronym {
+	color: #21759b;
+}
+
+.reveal span.compare1 {
+	color: #21759b;
+}
+
+.reveal span.compare2 {
+	color: #d54e21;
+}
+
+.reveal img.logo--someteawithme {
+	margin: 0;
+	width: 25%;
+}
+
+.reveal .highlight {
+	color: #21759b;
+}
